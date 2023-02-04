@@ -28,7 +28,7 @@ After following the installation steps below, develop you application as you wou
 - To run these migrations: 
 
 ```bash
-`php artisan migrate --path=database/migrations/landlord --database=landlord`
+php artisan migrate --path=database/migrations/landlord --database=landlord
 ```
 
 ## Installation
