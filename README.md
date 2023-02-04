@@ -10,7 +10,7 @@
 After following the installation steps below, develop you application as you would any other. Some important things to note:
 
 - Each Tenant (Team) will have it's own database
-- Migrations created with `php artisan make:migration` will be for the default database connection, which is the `teams` connection
+- Migrations created with `php artisan make:migration` without additional options provided will be for the default database connection, which is the `teams` connection
   - These migrations will run for new teams on the new team's database every a new team is created!
   - New migrations can be run for all teams from the cli with `php artisan team-db:migrate`
     - You may optionally pass an id as an argument to run the migrations for only one team database
@@ -24,6 +24,8 @@ After following the installation steps below, develop you application as you wou
         Will find the team database with an id of `1` and run migrations for it
 
 - All user account information is stored in the `landlord` database
+- To create a new landlor migration you may run  `php artisan make:migration {migration_name} --path=database/migrations/landlord
+- To run these migrations: `php artisan migrate --path=database/migrations/landlord --database=landlord`
 
 ## Installation
 
