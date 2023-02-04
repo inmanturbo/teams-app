@@ -3,10 +3,7 @@
 namespace App;
 
 use App\Contracts\CreatesDatabase;
-use App\Contracts\CreatesFilter;
 use App\Contracts\CreatesLink;
-use App\Contracts\CreatesReport;
-use App\Contracts\CreatesSearch;
 use App\Contracts\DatabaseManager;
 use App\Contracts\DeletesLink;
 use App\Contracts\MigratesTeamDatabase;
