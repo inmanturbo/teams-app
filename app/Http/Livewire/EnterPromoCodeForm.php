@@ -4,27 +4,22 @@ namespace App\Http\Livewire;
 
 use App\Contracts\SubscribesByPromoCode;
 use Auth;
+use Laravel\Jetstream\InteractsWithBanner;
+use Laravel\Jetstream\RedirectsActions;
 use Livewire\Component;
 
 class EnterPromoCodeForm extends Component
 {
+
+    use RedirectsActions;
+    use InteractsWithBanner;
+
     /**
      * The component's state.
      *
      * @var array
      */
     public $state = [];
-
-    /**
-     * Mount the component.
-     *
-     * @param  mixed  $team
-     * @return void
-     */
-    public function mount()
-    {
-        $this->state = (Auth::user())->withoutRelations()->toArray();
-    }
 
     public function subscribeByPromoCode(SubscribesByPromoCode $subscriber)
     {
@@ -35,6 +30,9 @@ class EnterPromoCodeForm extends Component
         $this->emit('saved');
 
         $this->emit('refresh-navigation-menu');
+
+        $this->banner('You are now subscribed!');
+
     }
 
     public function getUserProperty()
