@@ -35,14 +35,6 @@ Route::get('/laravel-welcome', function () {
     ]);
 })->name('welcome');
 
-Route::get('/team-landing', function () {
-
-    if(isset(app()['team'])){
-        return File::get(public_path() . '/docs/' . $file . '.html');
-    }
-
-})->name('welcome');
-
 Route::get('/', function () {
     $path =  isset(app()['team']) ? str_replace(url(''), '', app()['team']->landing_page_url) : '/laravel-welcome';
 
@@ -78,14 +70,14 @@ Route::group(['middleware' => [$authMiddleware, 'has_team', 'verified', config('
         return view('dashboard');
     })->name('dashboard');
   
-    if (config('auto_route.active')) {
-        Route::any(config('auto_route.route_prefix') . '/{path}', function () {
-           $view = str_replace(config('auto_route.route_prefix') . '/', config('auto_route.root_dir') . '/', request()->path());
+    if (config('auto-route.active')) {
+        Route::any(config('auto-route.route_prefix') . '/{path}', function () {
+           $view = str_replace(config('auto-route.route_prefix') . '/', config('auto-route.root_dir') . '/', request()->path());
            
            if(View::exists($view)) {
                $contents = View::make($view);
                $response = Response::make($contents, 200);
-               foreach(config('auto_route.headers') as $key => $value) {
+               foreach(config('auto-route.headers') as $key => $value) {
                    if(Str::contains($view, $key)){
                        $response->withHeaders($value);
                    }
@@ -96,8 +88,8 @@ Route::group(['middleware' => [$authMiddleware, 'has_team', 'verified', config('
             return abort(404);
         })
             ->where('path', '(.*)')
-            ->middleware(config('auto_route.middleware'))
-            ->name('auto_route');
+            ->middleware(config('auto-route.middleware'))
+            ->name('auto-route');
     }
 
 });

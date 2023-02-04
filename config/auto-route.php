@@ -2,18 +2,15 @@
 
 return [
 
-    'route_prefix' => 'qwoffice',
+    'route_prefix' => env('AUTO_ROUTE_PREFIX', 'view'),
     'active' => env('AUTO_ROUTE_VIEWS', true),
-    'root_dir' => 'office',
+    'root_dir' => 'auto-route',
     'middleware' => [
         'web',
         'auth',
         'team.auth',
     ],
     'headers' => [
-        'ap_detail_paystub' => [
-            'Content-Type' => 'application/pdf',
-        ],
 
         'pdf' => [
             'Content-Type' => 'application/pdf',
