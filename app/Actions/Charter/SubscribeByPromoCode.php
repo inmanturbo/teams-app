@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Validator;
 
 class SubscribeByPromoCode implements SubscribesByPromoCode
 {
-
     /**
      * Validate and save the given model.
      *
@@ -34,8 +33,7 @@ class SubscribeByPromoCode implements SubscribesByPromoCode
             }
         })->validateWithBag('subscribeByPromoCode');
 
-            $userAggregate = UserAggregate::retrieve($user->uuid);
-            $userAggregate->subscribeUserByPromoCode($input['promo_code'])->persist();
+        $userAggregate = UserAggregate::retrieve($user->uuid);
+        $userAggregate->subscribeUserByPromoCode($input['promo_code'])->persist();
     }
-
 }
