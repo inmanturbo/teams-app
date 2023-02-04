@@ -1,4 +1,4 @@
-# The Source Code of Cornerstone
+# The Source Code of TeamsApp
 
 ![Tests](https://github.com/inmanturbo/teamsapp/actions/workflows/test.yml/badge.svg)
 ![Styling](https://github.com/inmanturbo/teamsapp/actions/workflows/code-formatting.yml/badge.svg)
