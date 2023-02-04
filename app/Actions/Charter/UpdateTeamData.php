@@ -4,8 +4,8 @@ namespace App\Actions\Charter;
 
 use App\AddressData;
 use App\Aggregates\TeamAggregate;
-use App\TeamData;
 use App\Contracts\UpdatesTeamData;
+use App\TeamData;
 use Illuminate\Support\Facades\Validator;
 
 class UpdateTeamData implements UpdatesTeamData

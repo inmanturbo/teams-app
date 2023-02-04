@@ -3,8 +3,8 @@
 namespace App\Models;
 
 use App\AddressData;
-use App\TeamData;
 use App\Concerns\HasLandingPage;
+use App\TeamData;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Support\Facades\Auth;

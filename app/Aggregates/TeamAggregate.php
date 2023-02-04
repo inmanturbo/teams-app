@@ -2,8 +2,8 @@
 
 namespace App\Aggregates;
 
-use App\StorableEvents\TeamDataUpdated;
 use App\StorableEvents\TeamCreated;
+use App\StorableEvents\TeamDataUpdated;
 use App\StorableEvents\TeamDeleted;
 use App\StorableEvents\TeamDomainUpdated;
 use App\StorableEvents\TeamMemberAdded;

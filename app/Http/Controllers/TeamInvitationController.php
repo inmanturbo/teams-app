@@ -21,8 +21,7 @@ class TeamInvitationController
      */
     public function accept(Request $request, TeamInvitation $invitation)
     {
-
-        if($request->user()->email !== $invitation->email) {
+        if ($request->user()->email !== $invitation->email) {
             session()->flash('flash.banner', 'This invitation is for another email address.');
             session()->flash('flash.bannerStyle', 'danger');
 
