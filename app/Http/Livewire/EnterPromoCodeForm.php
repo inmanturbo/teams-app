@@ -10,7 +10,6 @@ use Livewire\Component;
 
 class EnterPromoCodeForm extends Component
 {
-
     use RedirectsActions;
     use InteractsWithBanner;
 
@@ -32,7 +31,6 @@ class EnterPromoCodeForm extends Component
         $this->emit('refresh-navigation-menu');
 
         $this->banner('You are now subscribed!');
-
     }
 
     public function getUserProperty()
