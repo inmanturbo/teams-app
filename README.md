@@ -25,7 +25,11 @@ After following the installation steps below, develop you application as you wou
 
 - All user account information is stored in the `landlord` database
 - To create a new landlord migration you may run  `php artisan make:migration {migration_name} --path=database/migrations/landlord`
-- To run these migrations: `php artisan migrate --path=database/migrations/landlord --database=landlord`
+- To run these migrations: 
+
+```bash
+`php artisan migrate --path=database/migrations/landlord --database=landlord`
+```
 
 ## Installation
 
