@@ -5,8 +5,6 @@ use App\Http\Controllers\TeamController as ControllersTeamController;
 use App\Http\Controllers\TeamInvitationController as ControllersTeamInvitationController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
-use Laravel\Fortify\Features;
-use Laravel\Fortify\Http\Controllers\RegisteredUserController;
 use Laravel\Jetstream\Http\Controllers\Livewire\ApiTokenController;
 use Laravel\Jetstream\Http\Controllers\Livewire\PrivacyPolicyController;
 use Laravel\Jetstream\Http\Controllers\Livewire\TermsOfServiceController;
