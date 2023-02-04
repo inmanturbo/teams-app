@@ -24,7 +24,7 @@ After following the installation steps below, develop you application as you wou
         Will find the team database with an id of `1` and run migrations for it
 
 - All user account information is stored in the `landlord` database
-- To create a new landlor migration you may run  `php artisan make:migration {migration_name} --path=database/migrations/landlord
+- To create a new landlord migration you may run  `php artisan make:migration {migration_name} --path=database/migrations/landlord`
 - To run these migrations: `php artisan migrate --path=database/migrations/landlord --database=landlord`
 
 ## Installation
