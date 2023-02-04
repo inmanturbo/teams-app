@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Get Started Guide | Docs</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    <link rel="icon" href="https://picsum.photos/100">
+    <meta name="description" content="This is description">
+    
+    <link rel="preload" href="/docs/assets/css/0.styles.c4f35299.css" as="style"><link rel="preload" href="/docs/assets/js/app.512c9b85.js" as="script"><link rel="preload" href="/docs/assets/js/2.980f3844.js" as="script"><link rel="preload" href="/docs/assets/js/10.abc0b49c.js" as="script"><link rel="prefetch" href="/docs/assets/js/11.52bb5069.js"><link rel="prefetch" href="/docs/assets/js/12.afcf2538.js"><link rel="prefetch" href="/docs/assets/js/13.dd7ec8dd.js"><link rel="prefetch" href="/docs/assets/js/3.4319b1b7.js"><link rel="prefetch" href="/docs/assets/js/4.47d9a46a.js"><link rel="prefetch" href="/docs/assets/js/5.0bd184ef.js"><link rel="prefetch" href="/docs/assets/js/6.4d41e4ec.js"><link rel="prefetch" href="/docs/assets/js/7.a530fe32.js"><link rel="prefetch" href="/docs/assets/js/8.d3315366.js"><link rel="prefetch" href="/docs/assets/js/9.9549dd30.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.c4f35299.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><!----> <span class="site-name">Docs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/docs/getstarted/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Install
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/docs/getstarted/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Install
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/docs/" aria-current="page" class="sidebar-link">Getting Started</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Getting Started</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/getstarted/" aria-current="page" class="active sidebar-link">Installation</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/getstarted/#installation" class="sidebar-link">Installation</a></li></ul></li><li><a href="/docs/policies/" class="sidebar-link">Policy</a></li><li><a href="/docs/todo-roadmap/" class="sidebar-link">Roadmap</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="get-started-guide"><a href="#get-started-guide" class="header-anchor">#</a> Get Started Guide</h1> <h2 id="installation"><a href="#installation" class="header-anchor">#</a> Installation</h2> <h3 id="install-dependencies"><a href="#install-dependencies" class="header-anchor">#</a> Install Dependencies</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">composer</span> <span class="token function">install</span>
+</code></pre></div><div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> <span class="token function">install</span> <span class="token operator">&amp;&amp;</span> <span class="token function">npm</span> run dev
+</code></pre></div><h3 id="configure-environment"><a href="#configure-environment" class="header-anchor">#</a> Configure Environment</h3> <p>First copy <code>.env.example</code> to <code>.env</code></p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">cp</span> .env.example .env
+</code></pre></div><p>Then edit database configurations to match your local setup</p> <h3 id="run-migrations"><a href="#run-migrations" class="header-anchor">#</a> Run Migrations</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>php artisan migrate:fresh <span class="token parameter variable">--seed</span> <span class="token parameter variable">--path</span><span class="token operator">=</span>database/migrations/landlord <span class="token parameter variable">--database</span><span class="token operator">=</span>landlord <span class="token parameter variable">--seeder</span><span class="token operator">=</span>LandlordSeeder
+</code></pre></div><h3 id="then-install-the-icons"><a href="#then-install-the-icons" class="header-anchor">#</a> Then install the icons</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>php artisan install:icons
+</code></pre></div><h3 id="after-that-is-finished-you-can-generate-an-app-key"><a href="#after-that-is-finished-you-can-generate-an-app-key" class="header-anchor">#</a> After that is finished you can generate an app key</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>php artisan key:generate
+</code></pre></div><h3 id="run-tests"><a href="#run-tests" class="header-anchor">#</a> Run Tests</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>php artisan <span class="token builtin class-name">test</span>
+</code></pre></div><h3 id="and-finally-serve-your-application"><a href="#and-finally-serve-your-application" class="header-anchor">#</a> And finally serve your application!</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>php artisan serve
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/" class="prev router-link-active">
+        Getting Started
+      </a></span> <span class="next"><a href="/docs/policies/">
+        Policy
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/docs/assets/js/app.512c9b85.js" defer></script><script src="/docs/assets/js/2.980f3844.js" defer></script><script src="/docs/assets/js/10.abc0b49c.js" defer></script>
+  </body>
+</html>

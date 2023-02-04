@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docs</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    <link rel="icon" href="https://picsum.photos/100">
+    <meta name="description" content="This is description">
+    
+    <link rel="preload" href="/docs/assets/css/0.styles.c4f35299.css" as="style"><link rel="preload" href="/docs/assets/js/app.512c9b85.js" as="script"><link rel="preload" href="/docs/assets/js/2.980f3844.js" as="script"><link rel="preload" href="/docs/assets/js/9.9549dd30.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.abc0b49c.js"><link rel="prefetch" href="/docs/assets/js/11.52bb5069.js"><link rel="prefetch" href="/docs/assets/js/12.afcf2538.js"><link rel="prefetch" href="/docs/assets/js/13.dd7ec8dd.js"><link rel="prefetch" href="/docs/assets/js/3.4319b1b7.js"><link rel="prefetch" href="/docs/assets/js/4.47d9a46a.js"><link rel="prefetch" href="/docs/assets/js/5.0bd184ef.js"><link rel="prefetch" href="/docs/assets/js/6.4d41e4ec.js"><link rel="prefetch" href="/docs/assets/js/7.a530fe32.js"><link rel="prefetch" href="/docs/assets/js/8.d3315366.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.c4f35299.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><!----> <span class="site-name">Docs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/docs/getstarted/" class="nav-link">
+  Install
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/docs/getstarted/" class="nav-link">
+  Install
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/docs/" aria-current="page" class="sidebar-link">Getting Started</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Getting Started</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/getstarted/" class="sidebar-link">Installation</a></li><li><a href="/docs/policies/" class="sidebar-link">Policy</a></li><li><a href="/docs/todo-roadmap/" class="sidebar-link">Roadmap</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><div class="language-php extra-class"><pre class="language-php"><code>        <span class="token class-name static-context">Gate</span><span class="token operator">::</span><span class="token function">define</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'manageSuperAdmin'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token class-name type-declaration">User</span> <span class="token variable">$user</span><span class="token punctuation">,</span> <span class="token class-name type-declaration">User</span> <span class="token variable">$userBeingManaged</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            
+            <span class="token keyword">return</span> <span class="token variable">$user</span><span class="token operator">-&gt;</span><span class="token function">isSuperAdmin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token operator">!</span><span class="token variable">$userBeingManaged</span><span class="token operator">-&gt;</span><span class="token function">isSuperAdmin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/docs/assets/js/app.512c9b85.js" defer></script><script src="/docs/assets/js/2.980f3844.js" defer></script><script src="/docs/assets/js/9.9549dd30.js" defer></script>
+  </body>
+</html>

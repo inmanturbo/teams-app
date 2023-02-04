@@ -1,0 +1,17 @@
+*.sqlite*
+mysqldump/*.sql
+mysqldump/*.sql.gz
+mysqldump/*.sql.zip
+mysqldump/*.sql.bz2
+mysqldump/*.sql.lzma
+mysqldump/*.sql.xz
+mysqldump/*.sql.7z
+mysqldump/*.sql.tar
+mysqldump/*.sql.tar.gz
+mysqldump/*.sql.tar.bz2
+mysqldump/*.sql.tar.lzma
+mysqldump/*.sql.tar.xz
+mysqldump/*.sql.tar.7z
+mysqldump/*.sql.tar.lz
+mysqldump/*.sql.tar.lz4
+test_database
