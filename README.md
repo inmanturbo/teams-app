@@ -23,7 +23,7 @@ php artisan team-db:migrate 1
 
 The above command find the team database with an id of `1` and run migrations for it
 
-- All user account information is stored in the `landlord` database
+- All user account information (for all teams) is stored in the `landlord` database
 - To create a new landlord migration you may run  `php artisan make:migration {migration_name} --path=database/migrations/landlord`
 - To run these migrations: 
 
