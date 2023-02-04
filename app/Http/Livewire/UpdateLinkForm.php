@@ -44,7 +44,7 @@ class UpdateLinkForm extends Component
         $this->resetErrorBag();
 
         // convert true/false string to boolean
-        if(isset($this->state['active'])){
+        if (isset($this->state['active'])) {
             $this->state['active'] = filter_var($this->state['active'], FILTER_VALIDATE_BOOLEAN);
         }
 
