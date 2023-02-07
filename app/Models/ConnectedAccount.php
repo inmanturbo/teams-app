@@ -47,8 +47,6 @@ class ConnectedAccount extends SocialstreamConnectedAccount
 
     /**
      * Get user of the connected account.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function user(): BelongsTo
     {

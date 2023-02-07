@@ -102,8 +102,6 @@ class User extends Authenticatable
 
     /**
      * Get the name of the unique identifier for the user.
-     *
-     * @return string
      */
     public function getAuthIdentifierName(): string
     {
@@ -129,8 +127,6 @@ class User extends Authenticatable
 
     /**
      * Get all of the connected accounts belonging to the user.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function connectedAccounts(): HasMany
     {

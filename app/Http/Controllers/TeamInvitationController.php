@@ -15,10 +15,6 @@ class TeamInvitationController
 {
     /**
      * Accept a team invitation.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  App\Models\TeamInvitation  $invitation
-     * @return \Illuminate\Http\RedirectResponse
      */
     public function accept(Request $request, TeamInvitation $invitation): RedirectResponse
     {
@@ -49,10 +45,6 @@ class TeamInvitationController
 
     /**
      * Cancel the given team invitation.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  App\Models\TeamInvitation  $invitation
-     * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy(Request $request, TeamInvitation $invitation): RedirectResponse
     {

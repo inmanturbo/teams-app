@@ -6,9 +6,6 @@ trait CleansInput
 {
     /**
      * Clean the input array.
-     *
-     * @param  array  $input
-     * @return array
      */
     protected function cleanInput(array $input): array
     {

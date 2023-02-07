@@ -31,8 +31,6 @@ class ContractMakeCommand extends GeneratorCommand
 
     /**
      * Get the stub file for the generator.
-     *
-     * @return string
      */
     protected function getStub(): string
     {
@@ -41,9 +39,6 @@ class ContractMakeCommand extends GeneratorCommand
 
     /**
      * Parse the class name and format according to the root namespace.
-     *
-     * @param  string  $name
-     * @return string
      */
     protected function qualifyClass(string $name): string
     {
@@ -64,9 +59,6 @@ class ContractMakeCommand extends GeneratorCommand
 
     /**
      * Get the default namespace for the class.
-     *
-     * @param  string  $rootNamespace
-     * @return string
      */
     protected function getDefaultNamespace(string $rootNamespace): string
     {

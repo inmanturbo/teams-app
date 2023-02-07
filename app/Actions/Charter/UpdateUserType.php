@@ -16,8 +16,6 @@ class UpdateUserType implements UpdatesUserType
      * Validate and save the given model.
      *
      * @param  mixed  $model
-     * @param  array  $input
-     * @return void
      */
     public function update($user, array $input): void
     {

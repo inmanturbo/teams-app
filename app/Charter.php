@@ -24,9 +24,6 @@ class Charter
 {
     /**
      * Register a class / callback that should be used to create a report.
-     *
-     * @param  string  $callback
-     * @return void
      */
     public static function updateTeamLandingPageUsing(string $callback): void
     {
@@ -35,9 +32,6 @@ class Charter
 
     /**
      * Register a class / callback that should be used to create a report.
-     *
-     * @param  string  $callback
-     * @return void
      */
     public static function migrateTeamDatabasesUsing(string $callback): void
     {
@@ -46,9 +40,6 @@ class Charter
 
     /**
      * Register a class / callback that should be used to create a database.
-     *
-     * @param  string  $callback
-     * @return void
      */
     public static function updateTeamDataUsing(string $callback): void
     {
@@ -57,9 +48,6 @@ class Charter
 
     /**
      * Register a class / callback that should be used to create a database.
-     *
-     * @param  string  $callback
-     * @return void
      */
     public static function manageDatabasesUsing(string $callback): void
     {
@@ -68,9 +56,6 @@ class Charter
 
     /**
      * Register a class / callback that should be used to create a database.
-     *
-     * @param  string  $callback
-     * @return void
      */
     public static function createDatabasesUsing(string $callback): void
     {
@@ -79,9 +64,6 @@ class Charter
 
     /**
      * Register a class / callback that should be used to subscribe by promo code.
-     *
-     * @param  string  $callback
-     * @return void
      */
     public static function subscribeByPromoCodeUsing(string $callback): void
     {
@@ -90,9 +72,6 @@ class Charter
 
     /**
      * Register a class / callback that should be used to create a link.
-     *
-     * @param  string  $callback
-     * @return void
      */
     public static function updateUserTypesUsing(string $callback): void
     {
@@ -101,9 +80,6 @@ class Charter
 
     /**
      * Register a class / callback that should be used to create a link.
-     *
-     * @param  string  $callback
-     * @return void
      */
     public static function updateCurrentTeamsUsing(string $callback): void
     {
@@ -112,9 +88,6 @@ class Charter
 
     /**
      * Register a class / callback that should be used to create a link.
-     *
-     * @param  string  $callback
-     * @return void
      */
     public static function createLinksUsing(string $callback): void
     {
@@ -123,9 +96,6 @@ class Charter
 
     /**
      * Register a class / callback that should be used to delete a link.
-     *
-     * @param  string  $callback
-     * @return void
      */
     public static function deleteLinksUsing(string $callback): void
     {
@@ -134,9 +104,6 @@ class Charter
 
     /**
      * Register a class / callback that should be used to update team logo.
-     *
-     * @param  string  $callback
-     * @return void
      */
     public static function updateTeamLogosUsing(string $callback): void
     {
@@ -145,9 +112,6 @@ class Charter
 
     /**
      * Register a class / callback that should be used to update links.
-     *
-     * @param  string  $callback
-     * @return void
      */
     public static function updateLinksUsing(string $callback): void
     {
@@ -156,9 +120,6 @@ class Charter
 
     /**
      * Register a class / callback that should be used to update team logo.
-     *
-     * @param  string  $callback
-     * @return void
      */
     public static function updateTeamDomainsUsing(string $callback): void
     {

@@ -12,9 +12,6 @@ class ConnectedAccountPolicy
 
     /**
      * Determine whether the user can view any models.
-     *
-     * @param  \App\Models\User  $user
-     * @return mixed
      */
     public function viewAny(User $user): bool
     {
@@ -23,10 +20,6 @@ class ConnectedAccountPolicy
 
     /**
      * Determine whether the user can view the model.
-     *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\ConnectedAccount  $connectedAccount
-     * @return mixed
      */
     public function view(User $user, ConnectedAccount $connectedAccount): bool
     {
@@ -35,9 +28,6 @@ class ConnectedAccountPolicy
 
     /**
      * Determine whether the user can create models.
-     *
-     * @param  \App\Models\User  $user
-     * @return mixed
      */
     public function create(User $user): bool
     {
@@ -46,10 +36,6 @@ class ConnectedAccountPolicy
 
     /**
      * Determine whether the user can update the model.
-     *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\ConnectedAccount  $connectedAccount
-     * @return mixed
      */
     public function update(User $user, ConnectedAccount $connectedAccount): bool
     {
@@ -58,10 +44,6 @@ class ConnectedAccountPolicy
 
     /**
      * Determine whether the user can delete the model.
-     *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\ConnectedAccount  $connectedAccount
-     * @return mixed
      */
     public function delete(User $user, ConnectedAccount $connectedAccount): bool
     {

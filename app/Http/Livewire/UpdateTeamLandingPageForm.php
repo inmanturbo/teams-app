@@ -48,8 +48,6 @@ class UpdateTeamLandingPageForm extends Component
 
     /**
      * Delete  team's profile photo.
-     *
-     * @return void
      */
     public function deleteLandingPage(): void
     {

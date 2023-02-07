@@ -27,8 +27,6 @@ class UpdateTeamLogoForm extends Component
 
     /**
      * Prepare the component.
-     *
-     * @return void
      */
     public function mount(): void
     {
@@ -57,8 +55,6 @@ class UpdateTeamLogoForm extends Component
 
     /**
      * Delete  team's profile photo.
-     *
-     * @return void
      */
     public function deleteProfilePhoto(): void
     {

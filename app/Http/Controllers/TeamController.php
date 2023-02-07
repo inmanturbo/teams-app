@@ -13,10 +13,6 @@ class TeamController extends LivewireTeamController
 {
     /**
      * Show the team management screen.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $teamId
-     * @return \Illuminate\View\View
      */
     public function show(Request $request, int $teamId): View
     {
@@ -34,9 +30,6 @@ class TeamController extends LivewireTeamController
 
     /**
      * Show the team creation screen.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\View\View
      */
     public function create(Request $request): View
     {
@@ -49,9 +42,6 @@ class TeamController extends LivewireTeamController
 
     /**
      * Show the team creation screen.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\View\View
      */
     public function createFirstTeam(Request $request): View
     {

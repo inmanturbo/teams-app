@@ -13,9 +13,6 @@ class CreateConnectedAccount implements CreatesConnectedAccounts
      * Create a connected account for a given user.
      *
      * @param  mixed  $user
-     * @param  string  $provider
-     * @param  \Laravel\Socialite\Contracts\User  $providerUser
-     * @return \JoelButcher\Socialstream\ConnectedAccount
      */
     public function create($user, string $provider, ProviderUser $providerUser): ConnectedAccount
     {

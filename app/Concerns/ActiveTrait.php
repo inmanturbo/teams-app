@@ -5,8 +5,6 @@ trait ActiveTrait
 {
     /**
      * Determine whether the model is active.
-     *
-     * @return bool
      */
     public function isActive(): bool
     {
@@ -15,8 +13,6 @@ trait ActiveTrait
 
     /**
      * Determine whether the model is inactive.
-     *
-     * @return bool
      */
     public function isInactive(): bool
     {
@@ -25,8 +21,6 @@ trait ActiveTrait
 
     /**
      * Activate the model.
-     *
-     * @return bool
      */
     public function activate(): bool
     {
@@ -35,8 +29,6 @@ trait ActiveTrait
 
     /**
      * Deactivate the model.
-     *
-     * @return bool
      */
     public function deactivate(): bool
     {

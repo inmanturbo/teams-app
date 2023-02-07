@@ -10,9 +10,6 @@ use Lab404\Impersonate\Controllers\ImpersonateController as Lab404ImpersonateCon
 class ImpersonateController extends Lab404ImpersonateController
 {
     /**
-     * @param int         $id
-     * @param string|null $guardName
-     * @return  RedirectResponse
      * @throws  \Exception
      */
     public function take(Request $request, int $id, ?string $guardName = null): RedirectResponse

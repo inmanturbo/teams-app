@@ -12,9 +12,6 @@ trait HasLandingPage
 {
     /**
      * Update the user's profile photo.
-     *
-     * @param  \Illuminate\Http\UploadedFile  $page
-     * @return void
      */
     public function updateLandingPage(UploadedFile $page): void
     {
@@ -34,8 +31,6 @@ trait HasLandingPage
 
     /**
      * Delete the user's profile photo.
-     *
-     * @return void
      */
     public function deletelandingPage(): void
     {
@@ -52,8 +47,6 @@ trait HasLandingPage
 
     /**
      * Get the URL to the user's profile photo.
-     *
-     * @return string
      */
     public function getLandingPageUrlAttribute(): string
     {
@@ -64,8 +57,6 @@ trait HasLandingPage
 
     /**
      * Get the URL to the user's profile photo.
-     *
-     * @return string
      */
     public function getLandingPageThumbUrlAttribute(): string
     {
@@ -81,8 +72,6 @@ trait HasLandingPage
 
     /**
      * Get the default profile photo URL if no profile photo has been uploaded.
-     *
-     * @return string
      */
     protected function defaultlandingPageUrl(): string
     {
@@ -91,8 +80,6 @@ trait HasLandingPage
 
     /**
      * Get the disk that profile photos should be stored on.
-     *
-     * @return string
      */
     public function landingPageDisk(): string
     {

@@ -11,8 +11,6 @@ class TeamDataCanBeUpdatedTest extends TestCase
 {
     /**
      * A basic feature test example.
-     *
-     * @return void
      */
     public function test_team_team_data_can_be_updated(): void
     {
@@ -29,8 +27,6 @@ class TeamDataCanBeUpdatedTest extends TestCase
 
     /**
      * A basic feature test example.
-     *
-     * @return void
      */
     public function test_update_team_team_data_requires_validation(): void
     {

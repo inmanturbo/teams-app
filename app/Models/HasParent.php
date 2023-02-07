@@ -34,16 +34,12 @@ trait HasParent
         });
     }
 
-    /**
-     * @return bool
-     */
     public function parentHasHasChildrenTrait(): bool
     {
         return $this->hasChildren ?? false;
     }
 
     /**
-     * @return string
      * @throws \ReflectionException
      */
     public function getTable(): string
@@ -56,7 +52,6 @@ trait HasParent
     }
 
     /**
-     * @return string
      * @throws \ReflectionException
      */
     public function getForeignKey(): string
@@ -66,8 +61,6 @@ trait HasParent
 
     /**
      * @param $related
-     * @param null $instance
-     * @return string
      * @throws \ReflectionException
      */
     public function joiningTable($related, null $instance = null): string
@@ -87,7 +80,6 @@ trait HasParent
     }
 
     /**
-     * @return string
      * @throws \ReflectionException
      */
     public function getClassNameForRelationships(): string
@@ -98,7 +90,6 @@ trait HasParent
     /**
      * Get the class name for polymorphic relations.
      *
-     * @return string
      * @throws \ReflectionException
      */
     public function getMorphClass(): string
@@ -115,7 +106,6 @@ trait HasParent
     /**
      * Get the class name for Parent Class.
      *
-     * @return string
      * @throws \ReflectionException
      */
     protected function getParentClass(): string

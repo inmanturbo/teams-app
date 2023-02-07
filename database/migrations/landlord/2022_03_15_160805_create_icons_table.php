@@ -26,8 +26,6 @@ return new class extends Migration
 
     /**
      * Get the migration connection name.
-     *
-     * @return string|null
      */
     public function getConnection(): ?string
     {

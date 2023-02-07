@@ -93,9 +93,7 @@ class UserProjector extends Projector
     /**
      * Update the given verified user's profile information.
      *
-     * @param  mixed  $user
      * @param  array  $input
-     * @return void
      */
     protected function updateVerifiedUser(MustVerifyEmail $user, UserProfileUpdated $event): void
     {

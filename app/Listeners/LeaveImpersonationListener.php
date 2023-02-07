@@ -9,9 +9,6 @@ class LeaveImpersonationListener
 {
     /**
      * Handle the event.
-     *
-     * @param  object  $event
-     * @return void
      */
     public function handle(LeaveImpersonation $event): void
     {

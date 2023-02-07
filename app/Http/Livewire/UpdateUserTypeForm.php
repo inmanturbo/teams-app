@@ -19,7 +19,6 @@ class UpdateUserTypeForm extends Component
      * Mount the component.
      *
      * @param  mixed  $team
-     * @return void
      */
     public function mount(): void
     {
