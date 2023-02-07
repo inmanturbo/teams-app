@@ -59,7 +59,7 @@ $authMiddleware = config('jetstream.guard')
 ? 'auth:'.config('jetstream.guard')
 : 'auth';
 
-Route::group(['middleware' => [$authMiddleware, 'has_team', 'verified', config('jetstream.auth_session')]], function () {
+Route::middleware($authMiddleware, 'has_team', 'verified', config('jetstream.auth_session'))->group(function () {
     Route::get('/impersonate/take/{id}/{guardName?}', [ImpersonateController::class, 'take'])->name('impersonate');
     Route::get(
         '/impersonate/leave',
