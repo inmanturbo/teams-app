@@ -16,7 +16,7 @@ class SearchPolicy
      * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function viewAny(User $user)
+    public function viewAny(User $user): bool
     {
         return true;
     }
@@ -28,7 +28,7 @@ class SearchPolicy
      * @param  \App\Models\Search  $search
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User $user, Search $search)
+    public function view(User $user, Search $search): bool
     {
         return true;
     }
@@ -39,7 +39,7 @@ class SearchPolicy
      * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function create(User $user)
+    public function create(User $user): bool
     {
         return true;
     }
@@ -51,7 +51,7 @@ class SearchPolicy
      * @param  \App\Models\Search  $search
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user, Search $search)
+    public function update(User $user, Search $search): bool
     {
         return true;
     }
@@ -63,7 +63,7 @@ class SearchPolicy
      * @param  \App\Models\Search  $search
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(User $user, Search $search)
+    public function delete(User $user, Search $search): bool
     {
         return true;
     }

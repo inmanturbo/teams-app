@@ -97,7 +97,7 @@ class UserProjector extends Projector
      * @param  array  $input
      * @return void
      */
-    protected function updateVerifiedUser(MustVerifyEmail $user, UserProfileUpdated $event)
+    protected function updateVerifiedUser(MustVerifyEmail $user, UserProfileUpdated $event): void
     {
         $user->forceFill([
             'name' => $event->name,

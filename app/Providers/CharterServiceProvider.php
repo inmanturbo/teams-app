@@ -28,7 +28,7 @@ class CharterServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         Charter::updateTeamLandingPageUsing(UpdateTeamLandingPage::class);
         Charter::migrateTeamDatabasesUsing(ArtisanTeamDatabaseMigrate::class);

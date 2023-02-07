@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use Symfony\Component\HttpFoundation\Response;
 use App\Models\Team;
 use Closure;
 use Illuminate\Http\Request;
@@ -15,7 +16,7 @@ class TeamAuth
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
-    public function handle(Request $request, Closure $next)
+    public function handle(Request $request, Closure $next): Response
     {
         if (isset(app()['team'])) {
             $permittedRoutes = ['create-first-team', 'join-team', 'team-invitations.accept'];

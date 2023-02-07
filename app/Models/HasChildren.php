@@ -2,6 +2,9 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Str;
 
 trait HasChildren
@@ -56,7 +59,7 @@ trait HasChildren
      * @param bool $exists
      * @return $this
      */
-    public function newInstance($attributes = [], $exists = false)
+    public function newInstance(array $attributes = [], bool $exists = false): $this
     {
         $model = isset($attributes[$this->getInheritanceColumn()])
             ? $this->getChildModel($attributes)
@@ -76,7 +79,7 @@ trait HasChildren
      * @param null $connection
      * @return $this
      */
-    public function newFromBuilder($attributes = [], $connection = null)
+    public function newFromBuilder(array $attributes = [], null $connection = null): $this
     {
         $attributes = (array) $attributes;
 
@@ -107,7 +110,7 @@ trait HasChildren
      * @param  string  $relation
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function belongsTo($related, $foreignKey = null, $ownerKey = null, $relation = null)
+    public function belongsTo(string $related, string $foreignKey = null, string $ownerKey = null, string $relation = null): BelongsTo
     {
         $instance = $this->newRelatedInstance($related);
 
@@ -130,7 +133,7 @@ trait HasChildren
      * @param  string  $localKey
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function hasMany($related, $foreignKey = null, $localKey = null)
+    public function hasMany(string $related, string $foreignKey = null, string $localKey = null): HasMany
     {
         return parent::hasMany($related, $foreignKey, $localKey);
     }
@@ -147,7 +150,7 @@ trait HasChildren
      * @param  string  $relation
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-    public function belongsToMany($related, $table = null, $foreignPivotKey = null, $relatedPivotKey = null, $parentKey = null, $relatedKey = null, $relation = null)
+    public function belongsToMany(string $related, string $table = null, string $foreignPivotKey = null, string $relatedPivotKey = null, string $parentKey = null, string $relatedKey = null, string $relation = null): BelongsToMany
     {
         $instance = $this->newRelatedInstance($related);
 
@@ -161,7 +164,7 @@ trait HasChildren
     /**
      * @return string
      */
-    public function getClassNameForRelationships()
+    public function getClassNameForRelationships(): string
     {
         return class_basename($this);
     }
@@ -169,7 +172,7 @@ trait HasChildren
     /**
      * @return string
      */
-    public function getInheritanceColumn()
+    public function getInheritanceColumn(): string
     {
         return property_exists($this, 'childColumn') ? $this->childColumn : 'type';
     }
@@ -191,7 +194,7 @@ trait HasChildren
      * @param $aliasOrClass
      * @return string
      */
-    public function classFromAlias($aliasOrClass)
+    public function classFromAlias($aliasOrClass): string
     {
         if (property_exists($this, 'childTypes')) {
             if (isset(($this->childTypes[$aliasOrClass]))) {
@@ -206,7 +209,7 @@ trait HasChildren
      * @param $className
      * @return string
      */
-    public function classToAlias($className)
+    public function classToAlias($className): string
     {
         if (property_exists($this, 'childTypes')) {
             if (in_array($className, $this->childTypes)) {
@@ -220,7 +223,7 @@ trait HasChildren
     /**
      * @return array
      */
-    public function getChildTypes()
+    public function getChildTypes(): array
     {
         return property_exists($this, 'childTypes') ? $this->childTypes : [];
     }

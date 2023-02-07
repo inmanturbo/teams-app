@@ -16,7 +16,7 @@ class ConnectedAccountPolicy
      * @param  \App\Models\User  $user
      * @return mixed
      */
-    public function viewAny(User $user)
+    public function viewAny(User $user): bool
     {
         return true;
     }
@@ -28,7 +28,7 @@ class ConnectedAccountPolicy
      * @param  \App\Models\ConnectedAccount  $connectedAccount
      * @return mixed
      */
-    public function view(User $user, ConnectedAccount $connectedAccount)
+    public function view(User $user, ConnectedAccount $connectedAccount): bool
     {
         return $user->ownsConnectedAccount($connectedAccount);
     }
@@ -39,7 +39,7 @@ class ConnectedAccountPolicy
      * @param  \App\Models\User  $user
      * @return mixed
      */
-    public function create(User $user)
+    public function create(User $user): bool
     {
         return true;
     }
@@ -51,7 +51,7 @@ class ConnectedAccountPolicy
      * @param  \App\Models\ConnectedAccount  $connectedAccount
      * @return mixed
      */
-    public function update(User $user, ConnectedAccount $connectedAccount)
+    public function update(User $user, ConnectedAccount $connectedAccount): bool
     {
         return $user->ownsConnectedAccount($connectedAccount);
     }
@@ -63,7 +63,7 @@ class ConnectedAccountPolicy
      * @param  \App\Models\ConnectedAccount  $connectedAccount
      * @return mixed
      */
-    public function delete(User $user, ConnectedAccount $connectedAccount)
+    public function delete(User $user, ConnectedAccount $connectedAccount): bool
     {
         return $user->ownsConnectedAccount($connectedAccount);
     }

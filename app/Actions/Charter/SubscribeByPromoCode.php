@@ -15,7 +15,7 @@ class SubscribeByPromoCode implements SubscribesByPromoCode
      * @param  array  $input
      * @return void
      */
-    public function subscribe($user, array $input)
+    public function subscribe($user, array $input): void
     {
         $validPromoCodes = array_filter(config('charter.promo_codes'));
 

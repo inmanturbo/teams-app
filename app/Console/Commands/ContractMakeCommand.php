@@ -34,7 +34,7 @@ class ContractMakeCommand extends GeneratorCommand
      *
      * @return string
      */
-    protected function getStub()
+    protected function getStub(): string
     {
         return base_path('stubs/contract.stub');
     }
@@ -45,7 +45,7 @@ class ContractMakeCommand extends GeneratorCommand
      * @param  string  $name
      * @return string
      */
-    protected function qualifyClass($name)
+    protected function qualifyClass(string $name): string
     {
         $name = ltrim($name, '\\/');
 
@@ -68,7 +68,7 @@ class ContractMakeCommand extends GeneratorCommand
      * @param  string  $rootNamespace
      * @return string
      */
-    protected function getDefaultNamespace($rootNamespace)
+    protected function getDefaultNamespace(string $rootNamespace): string
     {
         return $rootNamespace;
     }

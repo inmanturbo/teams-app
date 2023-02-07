@@ -15,7 +15,7 @@ class ImpersonateController extends Lab404ImpersonateController
      * @return  RedirectResponse
      * @throws  \Exception
      */
-    public function take(Request $request, $id, $guardName = null)
+    public function take(Request $request, int $id, ?string $guardName = null): RedirectResponse
     {
         $team = $request->user()->currentTeam;
         $userToImpersonate = $this->manager->findUserById($id, $guardName);

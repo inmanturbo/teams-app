@@ -15,7 +15,7 @@ class TeamServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
     }
 
@@ -24,7 +24,7 @@ class TeamServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         $this->configureRequests();
 

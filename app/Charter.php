@@ -28,7 +28,7 @@ class Charter
      * @param  string  $callback
      * @return void
      */
-    public static function updateTeamLandingPageUsing(string $callback)
+    public static function updateTeamLandingPageUsing(string $callback): void
     {
         app()->singleton(UpdatesTeamLandingPage::class, $callback);
     }
@@ -39,7 +39,7 @@ class Charter
      * @param  string  $callback
      * @return void
      */
-    public static function migrateTeamDatabasesUsing(string $callback)
+    public static function migrateTeamDatabasesUsing(string $callback): void
     {
         app()->singleton(MigratesTeamDatabase::class, $callback);
     }
@@ -50,7 +50,7 @@ class Charter
      * @param  string  $callback
      * @return void
      */
-    public static function updateTeamDataUsing(string $callback)
+    public static function updateTeamDataUsing(string $callback): void
     {
         app()->singleton(UpdatesTeamData::class, $callback);
     }
@@ -61,7 +61,7 @@ class Charter
      * @param  string  $callback
      * @return void
      */
-    public static function manageDatabasesUsing(string $callback)
+    public static function manageDatabasesUsing(string $callback): void
     {
         app()->singleton(DatabaseManager::class, $callback);
     }
@@ -72,7 +72,7 @@ class Charter
      * @param  string  $callback
      * @return void
      */
-    public static function createDatabasesUsing(string $callback)
+    public static function createDatabasesUsing(string $callback): void
     {
         app()->singleton(CreatesDatabase::class, $callback);
     }
@@ -83,7 +83,7 @@ class Charter
      * @param  string  $callback
      * @return void
      */
-    public static function subscribeByPromoCodeUsing(string $callback)
+    public static function subscribeByPromoCodeUsing(string $callback): void
     {
         app()->singleton(SubscribesByPromoCode::class, $callback);
     }
@@ -94,7 +94,7 @@ class Charter
      * @param  string  $callback
      * @return void
      */
-    public static function updateUserTypesUsing(string $callback)
+    public static function updateUserTypesUsing(string $callback): void
     {
         app()->singleton(UpdatesUserType::class, $callback);
     }
@@ -105,7 +105,7 @@ class Charter
      * @param  string  $callback
      * @return void
      */
-    public static function updateCurrentTeamsUsing(string $callback)
+    public static function updateCurrentTeamsUsing(string $callback): void
     {
         app()->singleton(UpdatesCurrentTeam::class, $callback);
     }
@@ -116,7 +116,7 @@ class Charter
      * @param  string  $callback
      * @return void
      */
-    public static function createLinksUsing(string $callback)
+    public static function createLinksUsing(string $callback): void
     {
         app()->singleton(CreatesLink::class, $callback);
     }
@@ -127,7 +127,7 @@ class Charter
      * @param  string  $callback
      * @return void
      */
-    public static function deleteLinksUsing(string $callback)
+    public static function deleteLinksUsing(string $callback): void
     {
         app()->singleton(DeletesLink::class, $callback);
     }
@@ -138,7 +138,7 @@ class Charter
      * @param  string  $callback
      * @return void
      */
-    public static function updateTeamLogosUsing(string $callback)
+    public static function updateTeamLogosUsing(string $callback): void
     {
         app()->singleton(UpdatesTeamLogo::class, $callback);
     }
@@ -149,7 +149,7 @@ class Charter
      * @param  string  $callback
      * @return void
      */
-    public static function updateLinksUsing(string $callback)
+    public static function updateLinksUsing(string $callback): void
     {
         app()->singleton(UpdatesLink::class, $callback);
     }
@@ -160,7 +160,7 @@ class Charter
      * @param  string  $callback
      * @return void
      */
-    public static function updateTeamDomainsUsing(string $callback)
+    public static function updateTeamDomainsUsing(string $callback): void
     {
         app()->singleton(UpdatesTeamDomains::class, $callback);
     }

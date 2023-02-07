@@ -26,7 +26,7 @@ class DatabaseDoesNotExist implements Rule
      * @param  mixed  $value
      * @return bool
      */
-    public function passes($attribute, $value)
+    public function passes(string $attribute, $value): bool
     {
         return ! $this->databaseManager->databaseExists($value);
     }
@@ -36,7 +36,7 @@ class DatabaseDoesNotExist implements Rule
      *
      * @return string
      */
-    public function message()
+    public function message(): string
     {
         return 'Oops! That didn\'t work Please Try a Different Database Name.';
     }

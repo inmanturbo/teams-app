@@ -20,7 +20,7 @@ class CreateDatabase implements CreatesDatabase
      * @param  array  $input
      * @return void
      */
-    public function create($user, array $input)
+    public function create($user, array $input): void
     {
         $nameRules = [
             'required',

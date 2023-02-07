@@ -16,7 +16,7 @@ class TeamMemberManager extends JetstreamTeamMemberManager
      *
      * @return void
      */
-    public function addTeamMember()
+    public function addTeamMember(): void
     {
         $this->resetErrorBag();
 
@@ -52,7 +52,7 @@ class TeamMemberManager extends JetstreamTeamMemberManager
      * @param  \Laravel\Jetstream\Contracts\RemovesTeamMembers  $remover
      * @return void
      */
-    public function removeTeamMember(RemovesTeamMembers $remover)
+    public function removeTeamMember(RemovesTeamMembers $remover): void
     {
         $remover->remove(
             $this->user,
@@ -75,7 +75,7 @@ class TeamMemberManager extends JetstreamTeamMemberManager
      * @param  int  $invitationId
      * @return void
      */
-    public function cancelTeamInvitation($invitationId)
+    public function cancelTeamInvitation(int $invitationId): void
     {
         if (! empty($invitationId)) {
             $model = Jetstream::teamInvitationModel();
@@ -92,7 +92,7 @@ class TeamMemberManager extends JetstreamTeamMemberManager
      * @param  \Laravel\Jetstream\Contracts\RemovesTeamMembers  $remover
      * @return void
      */
-    public function leaveTeam(RemovesTeamMembers $remover)
+    public function leaveTeam(RemovesTeamMembers $remover): void
     {
         $remover->remove(
             $this->user,

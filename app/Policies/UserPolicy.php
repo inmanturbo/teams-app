@@ -18,7 +18,7 @@ class UserPolicy
      * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function viewAny(User $user)
+    public function viewAny(User $user): bool
     {
         //
     }
@@ -30,7 +30,7 @@ class UserPolicy
      * @param  \App\Models\User  $model
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User|SuperAdmin $user, User|SuperAdmin $model)
+    public function view(User|SuperAdmin $user, User|SuperAdmin $model): bool
     {
         session()->put('user-' .$model->id, $model->id);
         if ($model->type === UserType::SuperAdmin && $user->type !== UserType::SuperAdmin) {
@@ -46,7 +46,7 @@ class UserPolicy
      * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function create(User $user)
+    public function create(User $user): bool
     {
         //
     }
@@ -75,7 +75,7 @@ class UserPolicy
      * @param  \App\Models\User  $model
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user, User $model)
+    public function update(User $user, User $model): bool
     {
         //
     }
@@ -99,7 +99,7 @@ class UserPolicy
      * @param  \App\Models\User  $model
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(User $user, User $model)
+    public function delete(User $user, User $model): bool
     {
         //
     }
@@ -111,7 +111,7 @@ class UserPolicy
      * @param  \App\Models\User  $model
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function restore(User $user, User $model)
+    public function restore(User $user, User $model): bool
     {
         //
     }
@@ -123,7 +123,7 @@ class UserPolicy
      * @param  \App\Models\User  $model
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function forceDelete(User $user, User $model)
+    public function forceDelete(User $user, User $model): bool
     {
         //
     }

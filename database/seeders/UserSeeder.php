@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
         $creator = app(CreatesNewUsers::class);
         $teamCreator = app(CreatesTeams::class);

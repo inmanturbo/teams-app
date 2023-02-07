@@ -10,7 +10,7 @@ use Tests\TestCase;
 
 class TeamDatabaseCanBeCreatedTest extends TestCase
 {
-    public function test_team_databases_can_be_created()
+    public function test_team_databases_can_be_created(): void
     {
         $this->actingAs(User::factory()->create());
 

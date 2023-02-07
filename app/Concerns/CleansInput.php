@@ -10,7 +10,7 @@ trait CleansInput
      * @param  array  $input
      * @return array
      */
-    protected function cleanInput(array $input)
+    protected function cleanInput(array $input): array
     {
         foreach ($input as &$value) {
             if (is_array($value)) {

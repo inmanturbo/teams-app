@@ -51,7 +51,7 @@ class UpdateTeamLandingPageForm extends Component
      *
      * @return void
      */
-    public function deleteLandingPage()
+    public function deleteLandingPage(): void
     {
         (Auth::user()->currentTeam)->deleteLandingPage();
 

@@ -13,7 +13,7 @@ class CreateLinkTest extends TestCase
 {
     // use RefreshDatabase;
 
-    public function test_links_can_be_created()
+    public function test_links_can_be_created(): void
     {
         $this->actingAs($user = User::factory()->withPersonalTeam()->create());
 
@@ -43,7 +43,7 @@ class CreateLinkTest extends TestCase
         ], (new Link())->getConnectionName());
     }
 
-    public function test_creating_link_requires_validation()
+    public function test_creating_link_requires_validation(): void
     {
         $this->actingAs($user = User::factory()->withPersonalTeam()->create());
 
@@ -69,7 +69,7 @@ class CreateLinkTest extends TestCase
         ], (new Link)->getConnectionName());
     }
 
-    public function test_null_link_type_will_create_internal_link()
+    public function test_null_link_type_will_create_internal_link(): void
     {
         $this->actingAs($user = User::factory()->withPersonalTeam()->create());
 
@@ -94,7 +94,7 @@ class CreateLinkTest extends TestCase
         ], (new Link())->getConnectionName());
     }
 
-    public function test_creating_link_requires_authorization()
+    public function test_creating_link_requires_authorization(): void
     {
         $user = User::factory()->withPersonalTeam()->create();
 

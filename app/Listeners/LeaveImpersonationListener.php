@@ -13,7 +13,7 @@ class LeaveImpersonationListener
      * @param  object  $event
      * @return void
      */
-    public function handle(LeaveImpersonation $event)
+    public function handle(LeaveImpersonation $event): void
     {
         $team = Team::where('uuid', session()->get('impersonated_team_uuid'))->firstOrFail();
 

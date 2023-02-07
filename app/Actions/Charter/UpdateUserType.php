@@ -19,7 +19,7 @@ class UpdateUserType implements UpdatesUserType
      * @param  array  $input
      * @return void
      */
-    public function update($user, array $input)
+    public function update($user, array $input): void
     {
         Gate::forUser($user)->authorize('updateUserType', User::class);
 

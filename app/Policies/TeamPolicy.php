@@ -17,7 +17,7 @@ class TeamPolicy
      * @param  \App\Models\User  $user
      * @return mixed
      */
-    public function viewAny(User $user)
+    public function viewAny(User $user): bool
     {
         return true;
     }
@@ -29,7 +29,7 @@ class TeamPolicy
      * @param  \App\Models\Team  $team
      * @return mixed
      */
-    public function view(User $user, Team $team)
+    public function view(User $user, Team $team): bool
     {
         return $user->belongsToTeam($team);
     }
@@ -40,7 +40,7 @@ class TeamPolicy
      * @param  \App\Models\User  $user
      * @return mixed
      */
-    public function create(User $user)
+    public function create(User $user): bool
     {
         return $user->type === UserType::SuperAdmin ||
             $user->type === UserType::Admin ||
@@ -56,7 +56,7 @@ class TeamPolicy
      * @param  \App\Models\Team  $team
      * @return mixed
      */
-    public function update(User $user, Team $team)
+    public function update(User $user, Team $team): bool
     {
         return $user->ownsTeam($team) || $user->hasTeamRole($team, 'admin');
     }
@@ -104,7 +104,7 @@ class TeamPolicy
      * @param  \App\Models\Team  $team
      * @return mixed
      */
-    public function delete(User $user, Team $team)
+    public function delete(User $user, Team $team): bool
     {
         return $user->ownsTeam($team);
     }

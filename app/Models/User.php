@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Dyrynda\Database\Support\BindsOnUuid;
 use Dyrynda\Database\Support\GeneratesUuid;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -104,7 +105,7 @@ class User extends Authenticatable
      *
      * @return string
      */
-    public function getAuthIdentifierName()
+    public function getAuthIdentifierName(): string
     {
         return $this->uuidColumn();
     }
@@ -131,7 +132,7 @@ class User extends Authenticatable
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function connectedAccounts()
+    public function connectedAccounts(): HasMany
     {
         return $this->hasMany(Socialstream::connectedAccountModel(), 'user_id', $this->getAuthIdentifierName());
     }

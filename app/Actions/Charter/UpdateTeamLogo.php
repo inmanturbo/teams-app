@@ -15,7 +15,7 @@ class UpdateTeamLogo implements UpdatesTeamLogo
      * @param  array  $input
      * @return void
      */
-    public function update($team, array $input)
+    public function update($team, array $input): void
     {
         Validator::make($input, [
             'photo' => ['nullable', 'mimes:jpg,jpeg,png', 'max:1024'],

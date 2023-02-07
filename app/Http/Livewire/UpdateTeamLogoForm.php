@@ -30,7 +30,7 @@ class UpdateTeamLogoForm extends Component
      *
      * @return void
      */
-    public function mount()
+    public function mount(): void
     {
         $this->state = (Auth::user()->currentTeam)->withoutRelations()->toArray();
     }
@@ -60,7 +60,7 @@ class UpdateTeamLogoForm extends Component
      *
      * @return void
      */
-    public function deleteProfilePhoto()
+    public function deleteProfilePhoto(): void
     {
         (Auth::user()->currentTeam)->deleteProfilePhoto();
 

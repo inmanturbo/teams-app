@@ -29,12 +29,12 @@ return new class extends Migration
      *
      * @return string|null
      */
-    public function getConnection()
+    public function getConnection(): ?string
     {
         return config('buku-icons.db_connection');
     }
 
-    public function up()
+    public function up(): void
     {
         $this->schema->create('icons', function (Blueprint $table) {
             $table->id();
@@ -46,7 +46,7 @@ return new class extends Migration
         });
     }
     
-    public function down()
+    public function down(): void
     {
         $this->schema->dropIfExists('icons');
     }

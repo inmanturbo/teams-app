@@ -16,7 +16,7 @@ class LinkPolicy
      * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function viewAny(User $user)
+    public function viewAny(User $user): bool
     {
         return true;
     }
@@ -28,7 +28,7 @@ class LinkPolicy
      * @param  \App\Models\Link  $link
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User $user, Link $link)
+    public function view(User $user, Link $link): bool
     {
         $teamIsCurrent = isset(app()['team']) && app('team')->id == $link->team->id;
 
@@ -44,7 +44,7 @@ class LinkPolicy
      * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function create(User $user)
+    public function create(User $user): bool
     {
         return $user->ownsTeam($user->currentTeam) ||
          $user->hasTeamRole($user->currentTeam, 'admin');
@@ -57,7 +57,7 @@ class LinkPolicy
      * @param  \App\Models\Link  $link
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user, Link $link)
+    public function update(User $user, Link $link): bool
     {
         return $user->id == $link->user_id ||
         $user->ownsTeam($link->team) ||
@@ -71,7 +71,7 @@ class LinkPolicy
      * @param  \App\Models\Link  $link
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(User $user, Link $link)
+    public function delete(User $user, Link $link): bool
     {
         return $this->update($user, $link);
     }
@@ -83,7 +83,7 @@ class LinkPolicy
      * @param  \App\Models\Link  $link
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function restore(User $user, Link $link)
+    public function restore(User $user, Link $link): bool
     {
         //
     }
@@ -95,7 +95,7 @@ class LinkPolicy
      * @param  \App\Models\Link  $link
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function forceDelete(User $user, Link $link)
+    public function forceDelete(User $user, Link $link): bool
     {
         //
     }

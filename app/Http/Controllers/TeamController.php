@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Response;
+use Illuminate\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Jetstream\Http\Controllers\Livewire\TeamController as LivewireTeamController;
@@ -16,7 +18,7 @@ class TeamController extends LivewireTeamController
      * @param  int  $teamId
      * @return \Illuminate\View\View
      */
-    public function show(Request $request, $teamId)
+    public function show(Request $request, int $teamId): View
     {
         $team = Jetstream::newTeamModel()->where('uuid', $teamId)->firstOrFail();
 
@@ -36,7 +38,7 @@ class TeamController extends LivewireTeamController
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\View\View
      */
-    public function create(Request $request)
+    public function create(Request $request): View
     {
         Gate::authorize('create', Jetstream::newTeamModel());
 
@@ -51,14 +53,14 @@ class TeamController extends LivewireTeamController
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\View\View
      */
-    public function createFirstTeam(Request $request)
+    public function createFirstTeam(Request $request): View
     {
         return view('teams.create-first-team', [
             'user' => $request->user(),
         ]);
     }
 
-    public function joinTeam(Request $request)
+    public function joinTeam(Request $request): Response
     {
         return view('teams.invitations', [
             'user' => $request->user(),

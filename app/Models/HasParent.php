@@ -37,7 +37,7 @@ trait HasParent
     /**
      * @return bool
      */
-    public function parentHasHasChildrenTrait()
+    public function parentHasHasChildrenTrait(): bool
     {
         return $this->hasChildren ?? false;
     }
@@ -46,7 +46,7 @@ trait HasParent
      * @return string
      * @throws \ReflectionException
      */
-    public function getTable()
+    public function getTable(): string
     {
         if (! isset($this->table)) {
             return str_replace('\\', '', Str::snake(Str::plural(class_basename($this->getParentClass()))));
@@ -59,7 +59,7 @@ trait HasParent
      * @return string
      * @throws \ReflectionException
      */
-    public function getForeignKey()
+    public function getForeignKey(): string
     {
         return Str::snake(class_basename($this->getParentClass())).'_'.$this->primaryKey;
     }
@@ -70,7 +70,7 @@ trait HasParent
      * @return string
      * @throws \ReflectionException
      */
-    public function joiningTable($related, $instance = null)
+    public function joiningTable($related, null $instance = null): string
     {
         $relatedClassName = method_exists((new $related), 'getClassNameForRelationships')
             ? (new $related)->getClassNameForRelationships()
@@ -90,7 +90,7 @@ trait HasParent
      * @return string
      * @throws \ReflectionException
      */
-    public function getClassNameForRelationships()
+    public function getClassNameForRelationships(): string
     {
         return class_basename($this->getParentClass());
     }
@@ -101,7 +101,7 @@ trait HasParent
      * @return string
      * @throws \ReflectionException
      */
-    public function getMorphClass()
+    public function getMorphClass(): string
     {
         if ($this->parentHasHasChildrenTrait()) {
             $parentClass = $this->getParentClass();
@@ -118,7 +118,7 @@ trait HasParent
      * @return string
      * @throws \ReflectionException
      */
-    protected function getParentClass()
+    protected function getParentClass(): string
     {
         static $parentClassName;
 

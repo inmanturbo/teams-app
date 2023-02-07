@@ -16,7 +16,7 @@ trait HasLandingPage
      * @param  \Illuminate\Http\UploadedFile  $page
      * @return void
      */
-    public function updateLandingPage(UploadedFile $page)
+    public function updateLandingPage(UploadedFile $page): void
     {
         tap($this->team_data->landingPage(), function ($previous) use ($page) {
             $this->forceFill([ 'team_data' =>
@@ -37,7 +37,7 @@ trait HasLandingPage
      *
      * @return void
      */
-    public function deletelandingPage()
+    public function deletelandingPage(): void
     {
         if (is_null($this->team_data->landingPage())) {
             return;
@@ -55,7 +55,7 @@ trait HasLandingPage
      *
      * @return string
      */
-    public function getLandingPageUrlAttribute()
+    public function getLandingPageUrlAttribute(): string
     {
         return $this->team_data->landingPage()
                     ? str_replace(url(''), '', Storage::disk($this->landingPageDisk())->url($this->team_data->landingPage()))
@@ -67,7 +67,7 @@ trait HasLandingPage
      *
      * @return string
      */
-    public function getLandingPageThumbUrlAttribute()
+    public function getLandingPageThumbUrlAttribute(): string
     {
         return $this->team_data->landingPage()
                     ? Storage::disk($this->landingPageDisk())->url($this->team_data->landingPage().'.png')
@@ -84,7 +84,7 @@ trait HasLandingPage
      *
      * @return string
      */
-    protected function defaultlandingPageUrl()
+    protected function defaultlandingPageUrl(): string
     {
         return url(config('team.default_landing_page_path', '/laravel-welcome'));
     }
@@ -94,7 +94,7 @@ trait HasLandingPage
      *
      * @return string
      */
-    public function landingPageDisk()
+    public function landingPageDisk(): string
     {
         return isset($_ENV['VAPOR_ARTIFACT_NAME']) ? 's3' : config('team.landing_page_disk', 'public');
     }

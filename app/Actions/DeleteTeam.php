@@ -13,7 +13,7 @@ class DeleteTeam implements DeletesTeams
      * @param  mixed  $team
      * @return void
      */
-    public function delete($team)
+    public function delete($team): void
     {
         TeamAggregate::retrieve($team->uuid)->deleteTeam()->persist();
     }

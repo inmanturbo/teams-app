@@ -28,7 +28,7 @@ class UpdateTeamDomainForm extends Component
      * @param  mixed  $team
      * @return void
      */
-    public function mount($team)
+    public function mount($team): void
     {
         $this->team = $team;
 
@@ -41,7 +41,7 @@ class UpdateTeamDomainForm extends Component
      * @param  \Laravel\Jetstream\Contracts\UpdatesTeamDomains  $updater
      * @return void
      */
-    public function updateTeamDomain(UpdatesTeamDomains $updater)
+    public function updateTeamDomain(UpdatesTeamDomains $updater): void
     {
         $this->resetErrorBag();
 

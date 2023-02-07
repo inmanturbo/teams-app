@@ -22,7 +22,7 @@ class SuperAdmin extends User
      * @param  string  $role
      * @return bool
      */
-    public function hasTeamRole($team, string $role)
+    public function hasTeamRole($team, string $role): bool
     {
         return true;
     }

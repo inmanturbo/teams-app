@@ -13,7 +13,7 @@ class LandlordSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
         $this->call(StoredEventsTableSeeder::class);
         return Artisan::call('event-sourcing:replay',[

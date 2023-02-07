@@ -25,7 +25,7 @@ class InstallIconsCommand extends Command
      *
      * @return int
      */
-    public function handle()
+    public function handle(): int
     {
         $this->callSilent('vendor:publish', ['--tag' => 'buku-icons-assets']);
         $this->callSilent('icon:cache');

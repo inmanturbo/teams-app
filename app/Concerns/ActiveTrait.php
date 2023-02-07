@@ -8,7 +8,7 @@ trait ActiveTrait
      *
      * @return bool
      */
-    public function isActive()
+    public function isActive(): bool
     {
         return $this->active;
     }
@@ -18,7 +18,7 @@ trait ActiveTrait
      *
      * @return bool
      */
-    public function isInactive()
+    public function isInactive(): bool
     {
         return ! $this->isActive();
     }
@@ -28,7 +28,7 @@ trait ActiveTrait
      *
      * @return bool
      */
-    public function activate()
+    public function activate(): bool
     {
         return $this->update(['active' => true]);
     }
@@ -38,7 +38,7 @@ trait ActiveTrait
      *
      * @return bool
      */
-    public function deactivate()
+    public function deactivate(): bool
     {
         return $this->update(['active' => false]);
     }

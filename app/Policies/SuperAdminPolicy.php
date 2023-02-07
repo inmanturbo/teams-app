@@ -17,7 +17,7 @@ class SuperAdminPolicy
      * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function viewAny(User $user)
+    public function viewAny(User $user): bool
     {
         //
     }
@@ -29,7 +29,7 @@ class SuperAdminPolicy
      * @param  \App\Models\SuperAdmin  $superAdmin
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User $user, SuperAdmin $superAdmin)
+    public function view(User $user, SuperAdmin $superAdmin): bool
     {
         if ($superAdmin->type === UserType::SuperAdmin && $user->type !== UserType::SuperAdmin) {
             return false;
@@ -44,7 +44,7 @@ class SuperAdminPolicy
      * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function create(User $user)
+    public function create(User $user): bool
     {
         //
     }
@@ -56,7 +56,7 @@ class SuperAdminPolicy
      * @param  \App\Models\SuperAdmin  $superAdmin
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user, SuperAdmin $superAdmin)
+    public function update(User $user, SuperAdmin $superAdmin): bool
     {
         //
     }
@@ -68,7 +68,7 @@ class SuperAdminPolicy
      * @param  \App\Models\SuperAdmin  $superAdmin
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(User $user, SuperAdmin $superAdmin)
+    public function delete(User $user, SuperAdmin $superAdmin): bool
     {
         //
     }
@@ -80,7 +80,7 @@ class SuperAdminPolicy
      * @param  \App\Models\SuperAdmin  $superAdmin
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function restore(User $user, SuperAdmin $superAdmin)
+    public function restore(User $user, SuperAdmin $superAdmin): bool
     {
         //
     }
@@ -92,7 +92,7 @@ class SuperAdminPolicy
      * @param  \App\Models\SuperAdmin  $superAdmin
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function forceDelete(User $user, SuperAdmin $superAdmin)
+    public function forceDelete(User $user, SuperAdmin $superAdmin): bool
     {
         //
     }

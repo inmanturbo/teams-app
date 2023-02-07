@@ -12,7 +12,7 @@ class UpdateTeamDomainTest extends TestCase
 {
     // use RefreshDatabase;
 
-    public function test_team_domains_can_be_updated()
+    public function test_team_domains_can_be_updated(): void
     {
         $this->actingAs($user = User::factory()->withPersonalTeam()->create());
 

@@ -13,7 +13,7 @@ use Tests\TestCase;
 
 class UserCanCreateFirstTeamTest extends TestCase
 {
-    public function test_first_team_can_be_created()
+    public function test_first_team_can_be_created(): void
     {
         $this->actingAs(User::factory()->create([
             'type' => UserType::UpgradedUser,

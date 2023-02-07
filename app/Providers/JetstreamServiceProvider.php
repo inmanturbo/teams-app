@@ -23,7 +23,7 @@ class JetstreamServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
         Jetstream::ignoreRoutes();
 
@@ -41,7 +41,7 @@ class JetstreamServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         $this->configurePermissions();
 
@@ -59,7 +59,7 @@ class JetstreamServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function configurePermissions()
+    protected function configurePermissions(): void
     {
         Jetstream::defaultApiTokenPermissions(['own:read']);
 

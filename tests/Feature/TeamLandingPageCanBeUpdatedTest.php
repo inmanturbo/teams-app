@@ -14,7 +14,7 @@ use Tests\TestCase;
 class TeamLandingPageCanBeUpdatedTest extends TestCase
 {
     /** @test */
-    public function test_can_update_landing_page()
+    public function test_can_update_landing_page(): void
     {
         Storage::fake('avatars');
 

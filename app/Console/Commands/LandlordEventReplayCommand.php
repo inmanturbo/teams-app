@@ -26,7 +26,7 @@ class LandlordEventReplayCommand extends Command
      *
      * @return mixed
      */
-    public function handle()
+    public function handle(): void
     {
         $this->call('event-sourcing:replay', [
             'projector' => config('landlord.event_projectors'),

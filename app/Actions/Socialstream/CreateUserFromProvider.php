@@ -38,7 +38,7 @@ class CreateUserFromProvider implements CreatesUserFromProvider
      * @param  \Laravel\Socialite\Contracts\User  $providerUser
      * @return \App\Models\User
      */
-    public function create(string $provider, ProviderUserContract $providerUser)
+    public function create(string $provider, ProviderUserContract $providerUser): User
     {
         return DB::transaction(function () use ($provider, $providerUser) {
             return tap(User::create([
@@ -68,7 +68,7 @@ class CreateUserFromProvider implements CreatesUserFromProvider
      * @param  \App\Models\User  $user
      * @return void
      */
-    protected function createTeam(User $user)
+    protected function createTeam(User $user): void
     {
         $user->ownedTeams()->save(Team::forceCreate([
             'user_id' => $user->id,

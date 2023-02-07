@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\RedirectResponse;
 use App\Contracts\UpdatesCurrentTeam;
 use App\Models\TeamInvitation;
 use Illuminate\Auth\Access\AuthorizationException;
@@ -19,7 +20,7 @@ class TeamInvitationController
      * @param  App\Models\TeamInvitation  $invitation
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function accept(Request $request, TeamInvitation $invitation)
+    public function accept(Request $request, TeamInvitation $invitation): RedirectResponse
     {
         if ($request->user()->email !== $invitation->email) {
             session()->flash('flash.banner', 'This invitation is for another email address.');
@@ -53,7 +54,7 @@ class TeamInvitationController
      * @param  App\Models\TeamInvitation  $invitation
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroy(Request $request, TeamInvitation $invitation)
+    public function destroy(Request $request, TeamInvitation $invitation): RedirectResponse
     {
         if (! Gate::forUser($request->user())->check('removeTeamMember', $invitation->team)) {
             throw new AuthorizationException;
