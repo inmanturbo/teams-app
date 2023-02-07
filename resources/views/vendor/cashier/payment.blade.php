@@ -192,8 +192,8 @@
                 return {
                     paymentIntent: @json($paymentIntent),
                     paymentMethod: null,
-                    name: '{{ optional($customer)->stripeName() }}',
-                    email: '{{ optional($customer)->stripeEmail() }}',
+                    name: '{{ $customer?->stripeName() }}',
+                    email: '{{ $customer?->stripeEmail() }}',
                     paymentElement: null,
                     remember: false,
                     isPaymentProcessing: false,
