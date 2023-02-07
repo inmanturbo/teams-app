@@ -18,7 +18,7 @@ class LandlordSeeder extends Seeder
         $this->call(StoredEventsTableSeeder::class);
         return Artisan::call('event-sourcing:replay',[
             'projector' => config('landlord.event_projectors'),
-            '--stored-event-model' => 'App\\Models\\StoredEvents\\EloquentStoredEvent',
+            '--stored-event-model' => \App\Models\StoredEvents\EloquentStoredEvent::class,
             '-n' => true,
         ]);
     }
