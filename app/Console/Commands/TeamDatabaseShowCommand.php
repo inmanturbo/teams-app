@@ -51,7 +51,7 @@ class TeamDatabaseShowCommand extends Command
         $this->line('');
         
         $options = [
-            '--database' => is_null($db->driver) ? config('team.db_connection', 'team') : ($db->driver === 'sqlite' ? 'team_sqlite' : 'team')
+            '--database' => is_null($db->driver) ? config('team.db_connection', 'team') : ($db->driver === 'sqlite' ? 'team_sqlite' : 'team'),
         ];
 
         $this->call(

@@ -48,7 +48,7 @@ class CharterServiceProvider extends ServiceProvider
     protected function getDatabaseManager()
     {
         $teamDatabaseDriver = config(
-            'database.connections.' 
+            'database.connections.'
             .config('team.db_connection', 'team')
             .'.driver'
         );

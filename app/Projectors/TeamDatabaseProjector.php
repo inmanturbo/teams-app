@@ -37,13 +37,14 @@ class TeamDatabaseProjector extends Projector
         switch ($databaseDriver) {
             case 'sqlite':
                 $databaseManager = new SQLiteDatabaseManager;
+
                 break;
             case 'mysql':
                 $databaseManager = new MySQLDatabaseManager;
+
                 break;
             default:
                 $databaseManager = app(DatabaseManager::class);
-
         }
 
         $databaseManager->setConnection($connection);

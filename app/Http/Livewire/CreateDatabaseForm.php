@@ -26,7 +26,7 @@ class CreateDatabaseForm extends Component
         $connection = config('team.db_connection', 'team');
         $this->state = [
             'name' => null,
-            'driver' => config("database.connections.{$connection}.driver")
+            'driver' => config("database.connections.{$connection}.driver"),
         ];
     }
 
