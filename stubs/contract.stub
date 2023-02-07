@@ -1,0 +1,15 @@
+<?php
+
+namespace DummyNamespace;
+
+interface DummyClass
+{
+    /**
+     * Validate and save the given model.
+     *
+     * @param  mixed  $model
+     * @param  array  $input
+     * @return void
+     */
+    public function dummyFunction($model, array $input);
+}

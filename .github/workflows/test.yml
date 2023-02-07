@@ -1,0 +1,43 @@
+
+
+name: Run tests
+
+on: [push, pull_request]
+
+jobs:
+    phpunit:
+        name: Run tests
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: '8.1'
+                  extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv, imagick
+                  coverage: none
+
+            - name: Create database
+              run: |
+                  sudo systemctl start mysql
+                  mysql  -u root -proot -e 'CREATE DATABASE IF NOT EXISTS tests_team;'
+            - name: Run composer install
+              run: composer install --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+              env:
+                COMPOSER_AUTH: ${{ secrets.COMPOSER_AUTH }}
+
+            - name: Prepare Laravel Application
+              run: |
+                  cp .env.ci .env
+                  php artisan key:generate
+                  php artisan icon:cache
+            - uses: actions/setup-node@v3
+            - name: Setup Vite Manifest
+              run: |
+                  yarn install
+                  yarn build
+            - name: Run tests
+              run: php artisan test
+              env:
+                  DB_PASSWORD: root
