@@ -16,11 +16,11 @@ class TeamDatabaseFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition()
+    public function definition(): array
     {
         return [
-            'uuid' => $this->faker->uuid,
-            'name' => str($this->faker->name)->snake(),
+            'uuid' => $this->faker->uuid(),
+            'name' => str($this->faker->name())->snake(),
             'driver' => 'mysql',
             'user_id' => isset(Auth::user()->id) ? Auth::user()->id : $this->faker->unique()->numberBetween(1, User::count()),
         ];

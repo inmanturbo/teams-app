@@ -11,7 +11,7 @@ use Laravel\Jetstream\Http\Controllers\Livewire\TermsOfServiceController;
 use Laravel\Jetstream\Http\Controllers\Livewire\UserProfileController;
 use Laravel\Jetstream\Jetstream;
 
-Route::group(['middleware' => config('jetstream.middleware', ['web'])], function () {
+Route::middleware(config('jetstream.middleware', ['web']))->group(function () {
     if (Jetstream::hasTermsAndPrivacyPolicyFeature()) {
         Route::get('/terms-of-service', [TermsOfServiceController::class, 'show'])->name('terms.show');
         Route::get('/privacy-policy', [PrivacyPolicyController::class, 'show'])->name('policy.show');
@@ -21,8 +21,8 @@ Route::group(['middleware' => config('jetstream.middleware', ['web'])], function
             ? 'auth:'.config('jetstream.guard')
             : 'auth';
 
-    Route::group(['middleware' => [$authMiddleware, 'team.auth', 'verified']], function () {
-        Route::group(['middleware' => ['has_team']], function () {
+    Route::middleware($authMiddleware, 'team.auth', 'verified')->group(function () {
+        Route::middleware('has_team')->group(function () {
 
             // User & Profile...
             Route::get('/user/profile', [UserProfileController::class, 'show'])

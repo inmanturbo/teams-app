@@ -31,10 +31,8 @@ class MigrateTeamDatabase implements ShouldQueue
 
     /**
      * Execute the job.
-     *
-     * @return void
      */
-    public function handle()
+    public function handle(): void
     {
         $teamDatabase = TeamDatabase::whereUuid($this->teamDatabaseUuid)->firstOrFail();
 

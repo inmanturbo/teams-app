@@ -5,10 +5,11 @@ namespace App\Http\Middleware;
 use App\Contracts\UpdatesCurrentTeam;
 use Closure;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class EnsureHasTeam
 {
-    public function handle(Request $request, Closure $next)
+    public function handle(Request $request, Closure $next): Response
     {
         if ($request->user() && ! $request->user()->isMemberOfATeam()) {
             return redirect()->route('create-first-team');

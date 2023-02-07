@@ -15,10 +15,9 @@ class MembershipPolicy
     /**
      * Determine whether the user can view any models.
      *
-     * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function viewAny(User $user)
+    public function viewAny(User $user): bool
     {
         //
     }
@@ -26,11 +25,9 @@ class MembershipPolicy
     /**
      * Determine whether the user can view the model.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\Membership  $membership
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User $user, Membership $membership)
+    public function view(User $user, Membership $membership): bool
     {
         //
     }
@@ -38,10 +35,9 @@ class MembershipPolicy
     /**
      * Determine whether the user can create models.
      *
-     * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function create(User $user)
+    public function create(User $user): bool
     {
         //
     }
@@ -49,11 +45,9 @@ class MembershipPolicy
     /**
      * Determine whether the user can update the model.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\Membership  $membership
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user, Membership $membership)
+    public function update(User $user, Membership $membership): bool
     {
         $team = Team::findOrFail($membership->team_id);
         $member = User::findOrFail($membership->user_id);
@@ -71,8 +65,6 @@ class MembershipPolicy
     /**
      * Determine whether the user can update the model.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\Membership  $membership
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function impersonate(User $user, Membership $membership)
@@ -83,11 +75,9 @@ class MembershipPolicy
     /**
      * Determine whether the user can delete the model.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\Membership  $membership
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(User $user, Membership $membership)
+    public function delete(User $user, Membership $membership): bool
     {
         $team = Team::find($membership->team_id);
         $member = User::find($membership->user_id);
@@ -101,11 +91,9 @@ class MembershipPolicy
     /**
      * Determine whether the user can restore the model.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\Membership  $membership
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function restore(User $user, Membership $membership)
+    public function restore(User $user, Membership $membership): bool
     {
         //
     }
@@ -113,11 +101,9 @@ class MembershipPolicy
     /**
      * Determine whether the user can permanently delete the model.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\Membership  $membership
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function forceDelete(User $user, Membership $membership)
+    public function forceDelete(User $user, Membership $membership): bool
     {
         //
     }

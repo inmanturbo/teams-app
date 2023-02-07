@@ -11,10 +11,8 @@ class UsersCanSubscribeByPromoCodeTest extends TestCase
 {
     /**
      * A basic feature test example.
-     *
-     * @return void
      */
-    public function test_users_can_subscribe_by_promo_code()
+    public function test_users_can_subscribe_by_promo_code(): void
     {
         $this->actingAs($user = User::factory()->withPersonalTeam()->create());
 

@@ -15,10 +15,8 @@ class DeleteLink implements DeletesLink
      *
      * @param  mixed  $user
      * @param  mixed  $team
-     * @param  string $uuid
-     * @return void
      */
-    public function delete($user, $uuid)
+    public function delete($user, string $uuid): void
     {
         $link = Link::where('uuid', $uuid)->firstOrFail();
 

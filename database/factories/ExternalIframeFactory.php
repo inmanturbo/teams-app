@@ -15,7 +15,7 @@ class ExternalIframeFactory extends LinkFactory
      *
      * @return array<string, mixed>
      */
-    public function definition()
+    public function definition(): array
     {
         return array_merge(parent::definition(), [
             'type' => LinkType::ExternalIframe->value,

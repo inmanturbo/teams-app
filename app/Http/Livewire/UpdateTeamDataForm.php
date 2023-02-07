@@ -26,9 +26,8 @@ class UpdateTeamDataForm extends Component
      * Mount the component.
      *
      * @param  mixed  $team
-     * @return void
      */
-    public function mount($team)
+    public function mount($team): void
     {
         $this->team = $team;
 
@@ -46,11 +45,8 @@ class UpdateTeamDataForm extends Component
 
     /**
      * Update the  team's name.
-     *
-     * @param  \Laravel\Jetstream\Contracts\UpdatesTeamDomains  $updater
-     * @return void
      */
-    public function updateTeamData(UpdatesTeamData $updater)
+    public function updateTeamData(UpdatesTeamData $updater): void
     {
         $this->resetErrorBag();
 

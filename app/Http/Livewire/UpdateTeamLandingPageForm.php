@@ -48,10 +48,8 @@ class UpdateTeamLandingPageForm extends Component
 
     /**
      * Delete  team's profile photo.
-     *
-     * @return void
      */
-    public function deleteLandingPage()
+    public function deleteLandingPage(): void
     {
         (Auth::user()->currentTeam)->deleteLandingPage();
 

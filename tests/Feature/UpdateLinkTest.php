@@ -13,7 +13,7 @@ class UpdateLinkTest extends TestCase
 {
     // use RefreshDatabase;
 
-    public function test_links_can_be_updated()
+    public function test_links_can_be_updated(): void
     {
         $this->actingAs($user = User::factory()->withPersonalTeam()->create());
 
@@ -45,7 +45,7 @@ class UpdateLinkTest extends TestCase
         ], $link->getConnectionName());
     }
 
-    public function test_updating_a_link_requires_validation()
+    public function test_updating_a_link_requires_validation(): void
     {
         $this->actingAs($user = User::factory()->withPersonalTeam()->create());
 
@@ -63,7 +63,7 @@ class UpdateLinkTest extends TestCase
                     ->assertHasErrors(['url']);
     }
 
-    public function test_updating_a_link_requires_authorization()
+    public function test_updating_a_link_requires_authorization(): void
     {
         $user = User::factory()->withPersonalTeam()->create();
 

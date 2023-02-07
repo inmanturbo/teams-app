@@ -18,7 +18,7 @@ class SocialstreamRegistrationTest extends TestCase
     /**
      * @dataProvider socialiteProvidersDataProvider
      */
-    public function test_users_can_register_using_socialite_providers(string $socialiteProvider)
+    public function test_users_can_register_using_socialite_providers(string $socialiteProvider): void
     {
         if (! FortifyFeatures::enabled(FortifyFeatures::registration())) {
             return $this->markTestSkipped('Registration support is not enabled.');

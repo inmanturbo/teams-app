@@ -5,6 +5,7 @@ namespace App\Models;
 use Dyrynda\Database\Support\BindsOnUuid;
 use Dyrynda\Database\Support\GeneratesUuid;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use JoelButcher\Socialstream\HasConnectedAccounts;
@@ -101,10 +102,8 @@ class User extends Authenticatable
 
     /**
      * Get the name of the unique identifier for the user.
-     *
-     * @return string
      */
-    public function getAuthIdentifierName()
+    public function getAuthIdentifierName(): string
     {
         return $this->uuidColumn();
     }
@@ -128,10 +127,8 @@ class User extends Authenticatable
 
     /**
      * Get all of the connected accounts belonging to the user.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function connectedAccounts()
+    public function connectedAccounts(): HasMany
     {
         return $this->hasMany(Socialstream::connectedAccountModel(), 'user_id', $this->getAuthIdentifierName());
     }

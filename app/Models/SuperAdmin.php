@@ -19,10 +19,8 @@ class SuperAdmin extends User
      * Determine if the user has the given role on the given team.
      *
      * @param  mixed  $team
-     * @param  string  $role
-     * @return bool
      */
-    public function hasTeamRole($team, string $role)
+    public function hasTeamRole($team, string $role): bool
     {
         return true;
     }

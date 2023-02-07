@@ -16,10 +16,8 @@ class UserTypeCanBeUpdatedTest extends TestCase
 
     /**
      * A basic feature test example.
-     *
-     * @return void
      */
-    public function test_user_types_can_be_updated()
+    public function test_user_types_can_be_updated(): void
     {
         $this->actingAs(User::factory()->withPersonalTeam()->create([
             'type' => UserType::SuperAdmin,

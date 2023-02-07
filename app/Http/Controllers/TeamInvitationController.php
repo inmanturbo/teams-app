@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Contracts\UpdatesCurrentTeam;
 use App\Models\TeamInvitation;
 use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Jetstream\Contracts\AddsTeamMembers;
@@ -14,12 +15,8 @@ class TeamInvitationController
 {
     /**
      * Accept a team invitation.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  App\Models\TeamInvitation  $invitation
-     * @return \Illuminate\Http\RedirectResponse
      */
-    public function accept(Request $request, TeamInvitation $invitation)
+    public function accept(Request $request, TeamInvitation $invitation): RedirectResponse
     {
         if ($request->user()->email !== $invitation->email) {
             session()->flash('flash.banner', 'This invitation is for another email address.');
@@ -48,12 +45,8 @@ class TeamInvitationController
 
     /**
      * Cancel the given team invitation.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  App\Models\TeamInvitation  $invitation
-     * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroy(Request $request, TeamInvitation $invitation)
+    public function destroy(Request $request, TeamInvitation $invitation): RedirectResponse
     {
         if (! Gate::forUser($request->user())->check('removeTeamMember', $invitation->team)) {
             throw new AuthorizationException;

@@ -12,10 +12,8 @@ class AppServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
-     *
-     * @return void
      */
-    public function register()
+    public function register(): void
     {
         Telescope::ignoreMigrations();
         Cashier::ignoreMigrations();
@@ -24,10 +22,8 @@ class AppServiceProvider extends ServiceProvider
 
     /**
      * Bootstrap any application services.
-     *
-     * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         //if the config('app.url_scheme') is set to https, then we will force the scheme to be https
         if (config('app.url_scheme') === 'https') {

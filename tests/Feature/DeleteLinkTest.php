@@ -13,7 +13,7 @@ class DeleteLinkTest extends TestCase
 {
     // use RefreshDatabase;
 
-    public function test_links_can_be_deleted()
+    public function test_links_can_be_deleted(): void
     {
         // $this->withoutExceptionHandling();
 

@@ -12,10 +12,8 @@ class UpdateTeamLogo implements UpdatesTeamLogo
      * Validate and update the given user's profile information.
      *
      * @param  mixed  $team
-     * @param  array  $input
-     * @return void
      */
-    public function update($team, array $input)
+    public function update($team, array $input): void
     {
         Validator::make($input, [
             'photo' => ['nullable', 'mimes:jpg,jpeg,png', 'max:1024'],

@@ -10,15 +10,13 @@ class LandlordSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
-     * @return void
      */
-    public function run()
+    public function run(): void
     {
         $this->call(StoredEventsTableSeeder::class);
         return Artisan::call('event-sourcing:replay',[
             'projector' => config('landlord.event_projectors'),
-            '--stored-event-model' => 'App\\Models\\StoredEvents\\EloquentStoredEvent',
+            '--stored-event-model' => \App\Models\StoredEvents\EloquentStoredEvent::class,
             '-n' => true,
         ]);
     }

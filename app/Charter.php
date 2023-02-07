@@ -24,143 +24,104 @@ class Charter
 {
     /**
      * Register a class / callback that should be used to create a report.
-     *
-     * @param  string  $callback
-     * @return void
      */
-    public static function updateTeamLandingPageUsing(string $callback)
+    public static function updateTeamLandingPageUsing(string $callback): void
     {
         app()->singleton(UpdatesTeamLandingPage::class, $callback);
     }
 
     /**
      * Register a class / callback that should be used to create a report.
-     *
-     * @param  string  $callback
-     * @return void
      */
-    public static function migrateTeamDatabasesUsing(string $callback)
+    public static function migrateTeamDatabasesUsing(string $callback): void
     {
         app()->singleton(MigratesTeamDatabase::class, $callback);
     }
 
     /**
      * Register a class / callback that should be used to create a database.
-     *
-     * @param  string  $callback
-     * @return void
      */
-    public static function updateTeamDataUsing(string $callback)
+    public static function updateTeamDataUsing(string $callback): void
     {
         app()->singleton(UpdatesTeamData::class, $callback);
     }
 
     /**
      * Register a class / callback that should be used to create a database.
-     *
-     * @param  string  $callback
-     * @return void
      */
-    public static function manageDatabasesUsing(string $callback)
+    public static function manageDatabasesUsing(string $callback): void
     {
         app()->singleton(DatabaseManager::class, $callback);
     }
 
     /**
      * Register a class / callback that should be used to create a database.
-     *
-     * @param  string  $callback
-     * @return void
      */
-    public static function createDatabasesUsing(string $callback)
+    public static function createDatabasesUsing(string $callback): void
     {
         app()->singleton(CreatesDatabase::class, $callback);
     }
 
     /**
      * Register a class / callback that should be used to subscribe by promo code.
-     *
-     * @param  string  $callback
-     * @return void
      */
-    public static function subscribeByPromoCodeUsing(string $callback)
+    public static function subscribeByPromoCodeUsing(string $callback): void
     {
         app()->singleton(SubscribesByPromoCode::class, $callback);
     }
 
     /**
      * Register a class / callback that should be used to create a link.
-     *
-     * @param  string  $callback
-     * @return void
      */
-    public static function updateUserTypesUsing(string $callback)
+    public static function updateUserTypesUsing(string $callback): void
     {
         app()->singleton(UpdatesUserType::class, $callback);
     }
 
     /**
      * Register a class / callback that should be used to create a link.
-     *
-     * @param  string  $callback
-     * @return void
      */
-    public static function updateCurrentTeamsUsing(string $callback)
+    public static function updateCurrentTeamsUsing(string $callback): void
     {
         app()->singleton(UpdatesCurrentTeam::class, $callback);
     }
 
     /**
      * Register a class / callback that should be used to create a link.
-     *
-     * @param  string  $callback
-     * @return void
      */
-    public static function createLinksUsing(string $callback)
+    public static function createLinksUsing(string $callback): void
     {
         app()->singleton(CreatesLink::class, $callback);
     }
 
     /**
      * Register a class / callback that should be used to delete a link.
-     *
-     * @param  string  $callback
-     * @return void
      */
-    public static function deleteLinksUsing(string $callback)
+    public static function deleteLinksUsing(string $callback): void
     {
         app()->singleton(DeletesLink::class, $callback);
     }
 
     /**
      * Register a class / callback that should be used to update team logo.
-     *
-     * @param  string  $callback
-     * @return void
      */
-    public static function updateTeamLogosUsing(string $callback)
+    public static function updateTeamLogosUsing(string $callback): void
     {
         app()->singleton(UpdatesTeamLogo::class, $callback);
     }
 
     /**
      * Register a class / callback that should be used to update links.
-     *
-     * @param  string  $callback
-     * @return void
      */
-    public static function updateLinksUsing(string $callback)
+    public static function updateLinksUsing(string $callback): void
     {
         app()->singleton(UpdatesLink::class, $callback);
     }
 
     /**
      * Register a class / callback that should be used to update team logo.
-     *
-     * @param  string  $callback
-     * @return void
      */
-    public static function updateTeamDomainsUsing(string $callback)
+    public static function updateTeamDomainsUsing(string $callback): void
     {
         app()->singleton(UpdatesTeamDomains::class, $callback);
     }

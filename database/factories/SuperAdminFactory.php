@@ -15,7 +15,7 @@ class SuperAdminFactory extends UserFactory
      *
      * @return array<string, mixed>
      */
-    public function definition()
+    public function definition(): array
     {
         return array_merge(parent::definition(), [
             'type' => UserType::SuperAdmin->value,

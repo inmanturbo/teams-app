@@ -2,11 +2,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\File;
 
 class DocsController extends Controller
 {
-    public function index(Request $request, $file = 'index')
+    public function index(Request $request, $file = 'index'): Response
     {
         if ($file != 'index') {
             $file = $file . '/index';

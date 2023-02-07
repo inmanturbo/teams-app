@@ -14,13 +14,13 @@ class SearchFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition()
+    public function definition(): array
     {
         return [
-            'uuid' => $this->faker->uuid,
-            'name' => $this->faker->word,
-            'description' => $this->faker->sentence,
-            'term' => $this->faker->word,
+            'uuid' => $this->faker->uuid(),
+            'name' => $this->faker->word(),
+            'description' => $this->faker->sentence(),
+            'term' => $this->faker->word(),
             'operator' => '=',
             'key' => 'id',
             'raw_query' =>  null,

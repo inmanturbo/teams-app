@@ -16,20 +16,16 @@ class FortifyServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
-     *
-     * @return void
      */
-    public function register()
+    public function register(): void
     {
         //
     }
 
     /**
      * Bootstrap any application services.
-     *
-     * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         Fortify::createUsersUsing(ActionsCreateNewUser::class);
         Fortify::updateUserProfileInformationUsing(ActionsUpdateUserProfileInformation::class);

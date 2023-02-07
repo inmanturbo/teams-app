@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateIconsTable extends Migration
+return new class extends Migration
 {
 
     /**
@@ -26,15 +26,13 @@ class CreateIconsTable extends Migration
 
     /**
      * Get the migration connection name.
-     *
-     * @return string|null
      */
-    public function getConnection()
+    public function getConnection(): ?string
     {
         return config('buku-icons.db_connection');
     }
 
-    public function up()
+    public function up(): void
     {
         $this->schema->create('icons', function (Blueprint $table) {
             $table->id();
@@ -46,8 +44,8 @@ class CreateIconsTable extends Migration
         });
     }
     
-    public function down()
+    public function down(): void
     {
         $this->schema->dropIfExists('icons');
     }
-};
+};;

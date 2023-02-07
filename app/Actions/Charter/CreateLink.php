@@ -20,10 +20,8 @@ class CreateLink implements CreatesLink
      *
      * @param  mixed  $user
      * @param  mixed  $team
-     * @param  array  $input
-     * @return void
      */
-    public function create($user, $team, array $input)
+    public function create($user, $team, array $input): void
     {
         Gate::forUser($user)->authorize('create', Link::class);
 

@@ -55,11 +55,8 @@ class CreateLinkForm extends Component
 
     /**
      * Create a new team.
-     *
-     * @param  \Laravel\Jetstream\Contracts\CreatesLink  $creator
-     * @return void
      */
-    public function createLink(CreatesLink $creator)
+    public function createLink(CreatesLink $creator): void
     {
         $this->resetErrorBag();
 
