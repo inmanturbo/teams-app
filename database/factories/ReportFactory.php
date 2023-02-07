@@ -17,14 +17,14 @@ class ReportFactory extends Factory
     public function definition()
     {
         return [
-            'uuid' => $this->faker->uuid,
-            'name' => $this->faker->name,
-            'description' => $this->faker->text,
-            'table_header' => $this->faker->text,
-            'color' => $this->faker->hexColor,
+            'uuid' => $this->faker->uuid(),
+            'name' => $this->faker->name(),
+            'description' => $this->faker->text(),
+            'table_header' => $this->faker->text(),
+            'color' => $this->faker->hexColor(),
             'opactity' => $this->faker->numberBetween(0, 100),
             'font_size' => $this->faker->numberBetween(0, 100),
-            'font_color' => $this->faker->hexColor,
+            'font_color' => $this->faker->hexColor(),
             'height' => $this->faker->numberBetween(0, 100),
             'width' => $this->faker->numberBetween(0, 100),
             'date_from' => $this->faker->dateTimeBetween('-1 years', 'now'),

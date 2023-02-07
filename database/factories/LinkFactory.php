@@ -22,9 +22,9 @@ class LinkFactory extends Factory
     {
         return [
             'type' => LinkType::InternalLink->value,
-            'url' => $this->faker->url,
-            'title' => $this->faker->sentence,
-            'label' => $this->faker->word,
+            'url' => $this->faker->url(),
+            'title' => $this->faker->sentence(),
+            'label' => $this->faker->word(),
             'target' => LinkTarget::Self->value,
             'view' => LinkMenu::NavigationMenu->value,
             'icon' => null,
