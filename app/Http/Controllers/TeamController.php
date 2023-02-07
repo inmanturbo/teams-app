@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Response;
-use Illuminate\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\View\View;
 use Laravel\Jetstream\Http\Controllers\Livewire\TeamController as LivewireTeamController;
 use Laravel\Jetstream\Jetstream;
 
