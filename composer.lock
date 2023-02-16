@@ -2081,34 +2081,34 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/headerx/buku-icons.git",
-                "reference": "ef83e33b8c3c2a0e86c659cc00bacfdb5f7e1a8e"
+                "reference": "c58b8e29f283fcb5c5f9b26578ed26f151f728c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/headerx/buku-icons/zipball/ef83e33b8c3c2a0e86c659cc00bacfdb5f7e1a8e",
-                "reference": "ef83e33b8c3c2a0e86c659cc00bacfdb5f7e1a8e",
+                "url": "https://api.github.com/repos/headerx/buku-icons/zipball/c58b8e29f283fcb5c5f9b26578ed26f151f728c3",
+                "reference": "c58b8e29f283fcb5c5f9b26578ed26f151f728c3",
                 "shasum": ""
             },
             "require": {
-                "andreiio/blade-iconoir": "^2.2",
-                "andreiio/blade-remix-icon": "^1.1",
-                "blade-ui-kit/blade-heroicons": "^2.1",
-                "brunocfalcao/blade-feather-icons": "^3.0",
-                "calebporzio/sushi": "^2.0",
-                "caseyamcl/toc": "^3.0",
-                "illuminate/contracts": "^8.37|^9|^10",
-                "itsmalikjones/blade-iconic": "^1.2",
-                "khatabwedaa/blade-css-icons": "^1.3",
-                "league/commonmark": "~1|~2",
-                "livewire/livewire": "^2.5",
-                "mallardduck/blade-boxicons": "^2.4",
-                "mallardduck/blade-lucide-icons": "^1.11",
-                "owenvoke/blade-fontawesome": "^2.2",
-                "postare/blade-mdi": "^1.0",
-                "ryangjchandler/blade-tabler-icons": "^2.0",
-                "spatie/laravel-package-tools": "^1.4.3",
-                "spatie/laravel-responsecache": "^7.2",
-                "troccoli/blade-health-icons": "^2.0"
+                "andreiio/blade-iconoir": ">=2.2",
+                "andreiio/blade-remix-icon": ">=1.1",
+                "blade-ui-kit/blade-heroicons": ">=2.1",
+                "brunocfalcao/blade-feather-icons": ">=3.0",
+                "calebporzio/sushi": ">=2.0",
+                "caseyamcl/toc": ">=3.0",
+                "illuminate/contracts": ">=8.37",
+                "itsmalikjones/blade-iconic": ">=1.2",
+                "khatabwedaa/blade-css-icons": ">=1.3",
+                "league/commonmark": ">=1",
+                "livewire/livewire": ">=2.5",
+                "mallardduck/blade-boxicons": ">=2.4",
+                "mallardduck/blade-lucide-icons": ">=1.11",
+                "owenvoke/blade-fontawesome": ">=2.2",
+                "postare/blade-mdi": ">=1.0",
+                "ryangjchandler/blade-tabler-icons": ">=2.0",
+                "spatie/laravel-package-tools": ">=1.4.3",
+                "spatie/laravel-responsecache": ">=7.2",
+                "troccoli/blade-health-icons": ">=2.0"
             },
             "require-dev": {
                 "brianium/paratest": "^6.4",
@@ -2159,7 +2159,7 @@
             ],
             "support": {
                 "issues": "https://github.com/headerx/buku-icons/issues",
-                "source": "https://github.com/headerx/buku-icons/tree/main"
+                "source": "https://github.com/headerx/buku-icons/tree/v1.0.2"
             },
             "funding": [
                 {
@@ -2167,7 +2167,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-02-16T18:59:03+00:00"
+            "time": "2023-02-16T19:24:46+00:00"
         },
         {
             "name": "headerx/laravel-iframes",
@@ -2880,16 +2880,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v10.0.0",
+            "version": "v10.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "be2ddb5c31b0b9ebc2738d9f37a9d4c960aa3199"
+                "reference": "0bd303853444de33f4fcb16d13bd7574030aa3d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/be2ddb5c31b0b9ebc2738d9f37a9d4c960aa3199",
-                "reference": "be2ddb5c31b0b9ebc2738d9f37a9d4c960aa3199",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/0bd303853444de33f4fcb16d13bd7574030aa3d4",
+                "reference": "0bd303853444de33f4fcb16d13bd7574030aa3d4",
                 "shasum": ""
             },
             "require": {
@@ -3076,7 +3076,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2023-02-14T15:12:47+00:00"
+            "time": "2023-02-16T22:03:27+00:00"
         },
         {
             "name": "laravel/jetstream",
@@ -6664,16 +6664,16 @@
         },
         {
             "name": "stripe/stripe-php",
-            "version": "v10.5.0",
+            "version": "v10.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stripe/stripe-php.git",
-                "reference": "331415b232d60d7c0449de7bde4cb7d4fedf982e"
+                "reference": "5fc46f43c743c715cb5edeb7be3383efb7b4bb2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/331415b232d60d7c0449de7bde4cb7d4fedf982e",
-                "reference": "331415b232d60d7c0449de7bde4cb7d4fedf982e",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/5fc46f43c743c715cb5edeb7be3383efb7b4bb2e",
+                "reference": "5fc46f43c743c715cb5edeb7be3383efb7b4bb2e",
                 "shasum": ""
             },
             "require": {
@@ -6719,9 +6719,9 @@
             ],
             "support": {
                 "issues": "https://github.com/stripe/stripe-php/issues",
-                "source": "https://github.com/stripe/stripe-php/tree/v10.5.0"
+                "source": "https://github.com/stripe/stripe-php/tree/v10.6.0"
             },
-            "time": "2023-02-02T21:02:09+00:00"
+            "time": "2023-02-16T23:01:54+00:00"
         },
         {
             "name": "symfony/console",

@@ -18,7 +18,7 @@ class UpdateConnectedAccount implements UpdatesConnectedAccounts
      * @param  \Laravel\Socialite\Contracts\User  $providerUser
      * @return \JoelButcher\Socialstream\ConnectedAccount
      */
-    public function update($user, ConnectedAccount $connectedAccount, string $provider, User $providerUser)
+    public function update(mixed $user, ConnectedAccount $connectedAccount, string $provider, User $providerUser): ConnectedAccount
     {
         Gate::forUser($user)->authorize('update', $connectedAccount);
 
