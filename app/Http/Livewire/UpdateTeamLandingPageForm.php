@@ -3,7 +3,6 @@
 namespace App\Http\Livewire;
 
 use App\Contracts\UpdatesTeamLandingPage;
-use App\Contracts\UpdatesTeamLogo;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use Livewire\WithFileUploads;

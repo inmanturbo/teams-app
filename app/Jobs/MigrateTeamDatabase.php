@@ -2,7 +2,6 @@
 
 namespace App\Jobs;
 
-use App\Actions\Charter\ArtisanTeamDatabaseMigrate;
 use App\Contracts\MigratesTeamDatabase;
 use App\Models\TeamDatabase;
 use Illuminate\Bus\Queueable;

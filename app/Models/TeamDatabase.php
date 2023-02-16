@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Contracts\DatabaseManager;
 use App\TeamDatabaseManagers\MySQLDatabaseManager;
 use App\TeamDatabaseManagers\SQLiteDatabaseManager;
 use Dyrynda\Database\Support\BindsOnUuid;

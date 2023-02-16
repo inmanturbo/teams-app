@@ -4,8 +4,6 @@ namespace App\Console\Commands;
 
 use App\Models\TeamDatabase;
 use Illuminate\Console\Command;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\DB;
 
 class TeamDatabaseTableCommand extends Command
 {

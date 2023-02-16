@@ -4,8 +4,6 @@ namespace Tests\Feature;
 
 use App\Http\Livewire\UpdateTeamLandingPageForm;
 use App\Models\User;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Livewire;

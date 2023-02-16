@@ -6,8 +6,6 @@ use App\Charter;
 use App\Console\Kernel;
 use App\Contracts\DatabaseManager;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
-use Illuminate\Support\Facades\DB;
-use Laravel\Jetstream\Jetstream;
 
 abstract class TestCase extends BaseTestCase
 {
