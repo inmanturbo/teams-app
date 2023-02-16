@@ -4,8 +4,6 @@ namespace App\Concerns;
 
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
-use Laravel\Jetstream\Features;
 use Spatie\Browsershot\Browsershot;
 
 trait HasLandingPage

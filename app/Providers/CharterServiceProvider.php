@@ -17,9 +17,7 @@ use App\Actions\Charter\UpdateUserType;
 use App\Charter;
 use App\TeamDatabaseManagers\MySQLDatabaseManager;
 use App\TeamDatabaseManagers\SQLiteDatabaseManager;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
-use Laravel\Jetstream\Jetstream;
 
 class CharterServiceProvider extends ServiceProvider
 {

@@ -4,7 +4,6 @@ namespace Tests\Feature;
 
 use App\Models\SuperAdmin;
 use App\Models\TeamDatabase;
-use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Laravel\Jetstream\Http\Livewire\CreateTeamForm;
 use Livewire\Livewire;
