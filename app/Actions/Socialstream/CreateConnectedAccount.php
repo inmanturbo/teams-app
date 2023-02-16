@@ -2,6 +2,7 @@
 
 namespace App\Actions\Socialstream;
 
+use Illuminate\Contracts\Auth\Authenticatable;
 use JoelButcher\Socialstream\Contracts\CreatesConnectedAccounts;
 use JoelButcher\Socialstream\Socialstream;
 use Laravel\Socialite\Contracts\User as ProviderUser;
@@ -16,7 +17,7 @@ class CreateConnectedAccount implements CreatesConnectedAccounts
      * @param  \Laravel\Socialite\Contracts\User  $providerUser
      * @return \JoelButcher\Socialstream\ConnectedAccount
      */
-    public function create($user, string $provider, ProviderUser $providerUser)
+    public function create(Authenticatable $user, string $provider, ProviderUser $providerUser) : mixed
     {
         return Socialstream::connectedAccountModel()::forceCreate([
             'user_id' => $user->uuid,
