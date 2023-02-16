@@ -8,7 +8,6 @@ use JoelButcher\Socialstream\ConnectedAccount as SocialstreamConnectedAccount;
 use JoelButcher\Socialstream\Events\ConnectedAccountCreated;
 use JoelButcher\Socialstream\Events\ConnectedAccountDeleted;
 use JoelButcher\Socialstream\Events\ConnectedAccountUpdated;
-use Laravel\Jetstream\Jetstream;
 
 class ConnectedAccount extends SocialstreamConnectedAccount
 {
@@ -43,5 +42,4 @@ class ConnectedAccount extends SocialstreamConnectedAccount
         'updated' => ConnectedAccountUpdated::class,
         'deleted' => ConnectedAccountDeleted::class,
     ];
-
 }
