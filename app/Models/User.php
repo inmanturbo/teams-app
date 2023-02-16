@@ -22,7 +22,7 @@ class User extends Authenticatable
     use HasApiTokens;
     use HasFactory;
     use HasProfilePhoto {
-        getProfilePhotoUrl as getPhotoUrl;
+        profilePhotoUrl as getPhotoUrl;
     }
     use HasTeams;
     use HasConnectedAccounts;
