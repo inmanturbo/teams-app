@@ -47,3 +47,10 @@ resources/legacy/qwoffice/filemanager
 **config.override.php
 resources/legacy/.vscode
 digapp.code-workspace
+
+/.phpunit.cache
+/public/build
+.env.production
+auth.json
+.phpunit.result.cache
+/.fleet

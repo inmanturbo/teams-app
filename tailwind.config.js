@@ -7,15 +7,13 @@ module.exports = {
         './vendor/laravel/jetstream/**/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
-        './vendor/rappasoft/laravel-livewire-tables/resources/views/**/*.blade.php',
-        './app/Http/Livewire/**/*.php',
     ],
 
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
-            },            
+                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+            },
         },
     },
 
