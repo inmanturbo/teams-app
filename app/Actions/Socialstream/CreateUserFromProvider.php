@@ -14,9 +14,7 @@ use Laravel\Socialite\Contracts\User as ProviderUserContract;
 
 class CreateUserFromProvider implements CreatesUserFromProvider
 {
-
     public CreatesConnectedAccounts $createsConnectedAccounts;
-
 
     public function __construct(CreatesConnectedAccounts $createsConnectedAccounts)
     {
