@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Dyrynda\Database\Support\BindsOnUuid;
 use Dyrynda\Database\Support\GeneratesUuid;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -93,6 +94,16 @@ class User extends Authenticatable
         'super_admin' => SuperAdmin::class,
         'upgraded_user' => UpgradedUser::class,
     ];
+
+    /**
+     * Get the URL to the user's profile photo.
+     */
+    public function profilePhotoUrl(): Attribute
+    {
+        return Attribute::get(fn () => filter_var($this->profile_photo_path, FILTER_VALIDATE_URL)
+            ? $this->profile_photo_path
+            : ($this->getPhotoUrl()->get)());
+    }
 
     public function getAuthIdentifier()
     {
