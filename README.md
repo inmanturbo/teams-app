@@ -1,3 +1,6 @@
+Please see https://github.com/inmanturbo/b2bsaas For a simplified, improved and version of this teams app. In The future inmanturbo/b2bsaas will likely be renamed to inmanturbo/teams-app! 
+
+
 # The Source Code of TeamsApp
 
 ![Tests](https://github.com/inmanturbo/teamsapp/actions/workflows/test.yml/badge.svg)
