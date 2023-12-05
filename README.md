@@ -1,4 +1,4 @@
-Please see https://github.com/inmanturbo/b2bsaas For a simplified, improved and version of this teams app. In The future inmanturbo/b2bsaas will likely be renamed to inmanturbo/teams-app! 
+Please see https://github.com/inmanturbo/b2bsaas For a simplified, improved and updated version of this teams app. In The future inmanturbo/b2bsaas will likely be renamed to inmanturbo/teams-app! 
 
 
 # The Source Code of TeamsApp
